@@ -9,4 +9,6 @@
 @property NSString *rewardType;
 @property int rewardAmount;
 
+-(id)initWithType:(NSString *)type andAmount:(int)amount;
+
 @end

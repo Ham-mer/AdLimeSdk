@@ -1,6 +1,5 @@
 //
 //  AdLimeRewardedVideoAdDelegate.h
-
 //
 
 #import <Foundation/Foundation.h>

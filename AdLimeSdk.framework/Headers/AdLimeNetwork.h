@@ -37,7 +37,10 @@ typedef NS_ENUM(NSInteger, AdLimeNetworkId) {
     MOBVISTA = 28,
     NEND = 29,
 	ADGENERATION = 30,
-	MAIO = 31
+	MAIO = 31,
+    ALIGAMES = 32,
+    CRITEO = 33,
+    ZHONGHUI_ADS = 34
 };
 
 @interface AdLimeNetwork : NSObject

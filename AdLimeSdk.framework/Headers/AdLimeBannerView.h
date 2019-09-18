@@ -21,9 +21,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// iOS End
 
 /// Unity Start
-- (id)initWithBannerClientReference:(AdLimeTypeBannerClientRef *)bannerClient adUnitId:(NSString *)adUnitId rootViewController:(UIViewController *)viewController;
+- (id)initWithBannerClientReference:(AdLimeTypeBannerClientRef _Nullable* _Nullable)bannerClient adUnitId:(NSString *)adUnitId rootViewController:(UIViewController *)viewController;
 // 引用 Unity 的 BannerClient
-@property(nonatomic, assign) AdLimeTypeBannerClientRef *bannerClient;
+@property(nonatomic, assign) AdLimeTypeBannerClientRef _Nullable* _Nullable bannerClient;
 // 广告加载后，回调到 Unity 的接口
 @property(nonatomic, assign) AdLimeBannerAdDidReceiveAdCallback adReceivedCallback;
 @property(nonatomic, assign) AdLimeBannerAdDidFailToReceiveAdWithErrorCallback adFailedCallback;
@@ -34,7 +34,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)setHE;
 - (BOOL)isReady;
-- (AdLimeILineItem *)getReadyLineItem;
 - (void)destroy;
 
 /// iOS Start
@@ -59,5 +58,4 @@ NS_ASSUME_NONNULL_BEGIN
 /// Unity End
 
 @end
-
 NS_ASSUME_NONNULL_END

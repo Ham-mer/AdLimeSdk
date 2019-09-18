@@ -19,6 +19,8 @@
 
 -(AdLimeBannerAdSize)getBannerAdSize;
 
+-(int)getRequestTimeOut;
+
 -(NSDictionary *)getServerExtras;
 
 @end

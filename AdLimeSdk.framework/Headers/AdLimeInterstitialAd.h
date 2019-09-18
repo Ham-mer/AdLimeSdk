@@ -10,6 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+// AdLimeInnerInterstitialAdDelegate 必须在这里声明
 @interface AdLimeInterstitialAd : NSObject<AdLimeInnerInterstitialAdDelegate>
 
 @property(nonatomic, readonly) NSString *adUnitId;
@@ -20,9 +21,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// iOS End
 
 /// Unity Start
-- (id)initWithInterstitialClientReference:(AdLimeTypeInterstitialClientRef *)interstitialClient adUnitId:(NSString *)adUnitId;
+- (id)initWithInterstitialClientReference:(AdLimeTypeInterstitialClientRef _Nullable* _Nullable)interstitialClient adUnitId:(NSString *)adUnitId;
 /// A reference to the Unity interstitial client.
-@property(nonatomic, assign) AdLimeTypeInterstitialClientRef *interstitialClient;
+@property(nonatomic, assign) AdLimeTypeInterstitialClientRef _Nullable* _Nullable interstitialClient;
 /// The ad callback into Unity.
 @property(nonatomic, assign) AdLimeInterstitialDidReceiveAdCallback adReceivedCallback;
 @property(nonatomic, assign) AdLimeInterstitialDidFailToReceiveAdWithErrorCallback adFailedCallback;

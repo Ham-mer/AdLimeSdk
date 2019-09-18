@@ -1,6 +1,5 @@
 //
 //  AdLimeInterstitialAdDelegate.h
-
 //
 
 #import <Foundation/Foundation.h>

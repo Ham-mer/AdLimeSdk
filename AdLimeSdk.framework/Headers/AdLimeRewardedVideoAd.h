@@ -9,18 +9,21 @@
 #import "AdLimeRewardedVideoAdDelegate.h"
 #import "AdLimeInnerRewardedVideoAdDelegate.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
+// AdLimeInnerRewardedVideoAdDelegate 必须在这里声明
 @interface AdLimeRewardedVideoAd : NSObject<AdLimeInnerRewardedVideoAdDelegate>
 
-@property(nonatomic, readonly, nonnull) NSString *adUnitId;
+@property(nonatomic, readonly) NSString *adUnitId;
 
 /// iOS Start
-- (nonnull id)initWithAdUnitId:(nonnull NSString *)adUnitId;
+- (id)initWithAdUnitId:(NSString *)adUnitId;
 @property(nonatomic, weak, nullable) id<AdLimeRewardedVideoAdDelegate> delegate;
 /// iOS End
 
 /// Unity Start
-- (nonnull id)initWithRewardedVideoClientReference:(AdLimeTypeRewardedVideoClientRef *)rewardedVideoClient adUnitId:(NSString *)adUnitId;
-@property(nonatomic, assign) AdLimeTypeRewardedVideoClientRef *rewardedVideoClient;
+- (id)initWithRewardedVideoClientReference:(AdLimeTypeRewardedVideoClientRef _Nullable* _Nullable)rewardedVideoClient adUnitId:(NSString *)adUnitId;
+@property(nonatomic, assign) AdLimeTypeRewardedVideoClientRef _Nullable *_Nullable rewardedVideoClient;
 /// The ad callback into Unity.
 @property(nonatomic, assign, nullable) AdLimeRewardVideoDidReceiveAdCallback didReceivedCallback;
 @property(nonatomic, assign, nullable) AdLimeRewardVideoDidOpenCallback didOpenCallback;
@@ -47,5 +50,7 @@
 - (void)showUnity;
 - (void)showUnity:(nullable int [])networkIds;
 /// Unity End
+
+NS_ASSUME_NONNULL_END
 
 @end

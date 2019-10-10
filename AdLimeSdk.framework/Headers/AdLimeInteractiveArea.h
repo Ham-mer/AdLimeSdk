@@ -8,27 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NS_OPTIONS(NSUInteger, AdLimeInteractiveView) {
-    ADLIME_INTERACTIVE_VIEW_TITLE = 1 << 0,
-    ADLIME_INTERACTIVE_VIEW_SUBTITLE = 1 << 1,
-    ADLIME_INTERACTIVE_VIEW_BODY =  1 << 2,
-    ADLIME_INTERACTIVE_VIEW_ADVERTISER = 1 << 3,
-    ADLIME_INTERACTIVE_VIEW_CALL_TO_ACTION = 1 << 4,
-    ADLIME_INTERACTIVE_VIEW_ICON = 1 << 5,
-    ADLIME_INTERACTIVE_VIEW_MEDIAVIEW = 1 << 6,
-    ADLIME_INTERACTIVE_VIEW_ADCHOICES = 1 << 7,
-    ADLIME_INTERACTIVE_VIEW_RATING_VIEW = 1 << 8,
-    ADLIME_INTERACTIVE_VIEW_RATING_LABEL = 1 << 9,
-    ADLIME_INTERACTIVE_VIEW_PRICE = 1 << 10,
-    ADLIME_INTERACTIVE_VIEW_STORE = 1 << 11,
-    ADLIME_INTERACTIVE_VIEW_ROOTVIEW = 1 << 12
-};
-
 @interface AdLimeInteractiveArea : NSObject
 
-+(AdLimeInteractiveArea *)builder;
+// 将所有元素作为点击区域
 +(AdLimeInteractiveArea *)allArea;
 
+// 通过 builder.addXxx 将元素添加到点击区域
++(AdLimeInteractiveArea *)builder;
+
+// 添加元素到点击区域
 -(AdLimeInteractiveArea *)addTitle;
 -(AdLimeInteractiveArea *)addSubTitle;
 -(AdLimeInteractiveArea *)addBody;
@@ -43,6 +31,7 @@ typedef NS_OPTIONS(NSUInteger, AdLimeInteractiveView) {
 -(AdLimeInteractiveArea *)addStore;
 -(AdLimeInteractiveArea *)addRootView;
 
+// 点击区域是否包括 Xxx
 -(BOOL)hasTitle;
 -(BOOL)hasSubTitle;
 -(BOOL)hasBody;

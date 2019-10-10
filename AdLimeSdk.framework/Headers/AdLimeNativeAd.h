@@ -7,6 +7,7 @@
 #import <UIKit/UIKit.h>
 #import "AdLimeNativeAdDelegate.h"
 #import "AdLimeNativeAdLayout.h"
+#import "AdLimeNetworkConfigs.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -18,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, weak, nullable) id<AdLimeNativeAdDelegate> delegate;
 
 - (void)setNativeAdLayout:(AdLimeNativeAdLayout *)layout;
+- (void)setNetworkConfigs:(AdLimeNetworkConfigs *)configs;
 - (void)setHE;
 - (void)loadAd;
 - (BOOL)isReady;

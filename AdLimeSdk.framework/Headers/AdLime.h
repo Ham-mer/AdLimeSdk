@@ -3,6 +3,7 @@
 //  Sdk 初始化的接口。
 
 #import <Foundation/Foundation.h>
+#import "AdLimeNetworkConfigs.h"
 
 @interface AdLime : NSObject
 
@@ -14,7 +15,10 @@
 + (void)setLogEnable:(BOOL)enable;
 
 // 设置用户是否同意了 Gdpr
-+ (void) setGdprConsent: (BOOL) consent;
++ (void) setGdprConsent:(BOOL) consent;
 + (BOOL) isGdprConsent;
+
++ (void)setGlobalNetworkConfigs:(AdLimeNetworkConfigs *)configs;
++ (AdLimeNetworkConfigs *)getGlobalNetworkConfigs;
 
 @end

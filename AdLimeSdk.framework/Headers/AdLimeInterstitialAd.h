@@ -7,6 +7,7 @@
 #import "AdLimeTypes.h"
 #import "AdLimeInterstitialAdDelegate.h"
 #import "AdLimeInnerInterstitialAdDelegate.h"
+#import "AdLimeNetworkConfigs.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -32,6 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) AdLimeInterstitialWillLeaveApplicationCallback willLeaveCallback;
 /// Unity End
 
+- (void)setNetworkConfigs:(AdLimeNetworkConfigs *)configs;
 - (void)setHE;
 - (void)setCL:(int)cacheCount;
 - (void)loadAd;

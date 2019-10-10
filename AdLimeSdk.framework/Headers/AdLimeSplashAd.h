@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "AdLimeILineItem.h"
 #import "AdLimeSplashAdDelegate.h"
+#import "AdLimeNetworkConfigs.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -20,8 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(id)initWithAdUnitId:(NSString *)adUnitId uiWindow:(UIWindow *)uiWindow;
 
--(void)setBottomView:(UIView *)bottomView;
--(void)setWidth:(int)width height:(int)height;
+- (void)setNetworkConfigs:(AdLimeNetworkConfigs *)configs;
 
 -(void)loadAd;
 -(BOOL)isReady;

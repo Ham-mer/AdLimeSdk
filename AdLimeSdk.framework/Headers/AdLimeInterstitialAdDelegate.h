@@ -1,6 +1,6 @@
 //
 //  AdLimeInterstitialAdDelegate.h
-//  iOS 广告回调。
+//
 
 #import <Foundation/Foundation.h>
 #import "AdLimeAdError.h"

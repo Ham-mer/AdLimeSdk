@@ -1,6 +1,5 @@
 //
 //  AdLimeRewardedVideoAd.h
-
 //
 
 #import <Foundation/Foundation.h>
@@ -8,6 +7,7 @@
 #import "AdLimeTypes.h"
 #import "AdLimeRewardedVideoAdDelegate.h"
 #import "AdLimeInnerRewardedVideoAdDelegate.h"
+#import "AdLimeNetworkConfigs.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -36,6 +36,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign, nullable) AdLimeRewardVideoDidFailedToRewardCallback didFailedToRewardCallback;
 /// Unity End
 
+- (void)setNetworkConfigs:(AdLimeNetworkConfigs *)configs;
 - (void)setHE;
 - (void)setCL:(int)cacheCount;
 - (void)loadAd;

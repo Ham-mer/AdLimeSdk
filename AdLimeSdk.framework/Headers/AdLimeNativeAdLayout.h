@@ -27,17 +27,31 @@ typedef void (^ratingCallback)(double rating);
 
 @property UILabel *ratingLabel;
 @property UIView *ratingView;
+@property ratingCallback ratingCallback;
 
 @property UILabel *priceLabel;
 @property UILabel *storeLabel;
-
-@property ratingCallback ratingCallback;
 
 @property AdLimeInteractiveArea *interactiveArea;
 
 -(UIView *)getRatingView;
 
 -(void)setImage:(UIImageView *)imageView withUrl:(NSString *)url;
+
+-(BOOL)hasTitle;
+-(BOOL)hasSubTitle;
+-(BOOL)hasBody;
+-(BOOL)hasAdvertiser;
+-(BOOL)hasCallToAction;
+
+-(BOOL)hasIconView;
+-(BOOL)hasMediaView;
+-(BOOL)hasAdChoicesView;
+
+-(BOOL)hasRatingLabel;
+-(BOOL)hasRatingView;
+-(BOOL)hasPrice;
+-(BOOL)hasStore;
 
 -(void)updateTitle:(NSString *)title;
 -(void)updateSubTitle:(NSString *)subTitle;
@@ -52,6 +66,8 @@ typedef void (^ratingCallback)(double rating);
 -(void)updateMediaView:(UIView *)view;
 -(void)updateMediaImage:(UIImage *)image;
 -(void)updateMediaImageUrl:(NSString *)url;
+// imageRate = width/height
+-(void)updateMediaGroupImageList:(NSArray<NSString *> *)urlArray imageRate:(CGFloat)imageRate;
 
 -(void)updateAdChoicesView:(UIView *)view;
 -(void)updateAdChoicesImage:(UIImage *)image;
@@ -63,9 +79,9 @@ typedef void (^ratingCallback)(double rating);
 -(void)updateStore:(NSString *)store;
 
 -(void)hideAll;
--(NSMutableArray *)getAllViewArray;
--(NSMutableArray *)getNonMediaViewArray;
+-(NSMutableArray<UIView *> *)getAllViewArray;
+-(NSMutableArray<UIView *> *)getNonMediaViewArray;
 
--(NSMutableArray *)getInteractiveViewArray;
+-(NSMutableArray<UIView *> *)getInteractiveViewArray;
 
 @end

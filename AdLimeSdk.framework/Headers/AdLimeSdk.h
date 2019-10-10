@@ -15,10 +15,17 @@ FOUNDATION_EXPORT const unsigned char AdLimeSdkVersionString[];
 #import <AdLimeSdk/AdLimeAdError.h>
 #import <AdLimeSdk/AdLimeAdType.h>
 
+#import <AdLimeSdk/AdLimeBannerAdSize.h>
 #import <AdLimeSdk/AdLimeBannerView.h>
 #import <AdLimeSdk/AdLimeBannerViewDelegate.h>
 
+#import <AdLimeSdk/AdLimeFeed.h>
+#import <AdLimeSdk/AdLimeFeedList.h>
+#import <AdLimeSdk/AdLimeFeedListDelegate.h>
+
 #import <AdLimeSdk/AdLimeILineItem.h>
+
+#import <AdLimeSdk/AdLimeInteractiveArea.h>
 
 #import <AdLimeSdk/AdLimeInterstitialAd.h>
 #import <AdLimeSdk/AdLimeInterstitialAdDelegate.h>
@@ -28,11 +35,14 @@ FOUNDATION_EXPORT const unsigned char AdLimeSdkVersionString[];
 #import <AdLimeSdk/AdLimeNativeAdDelegate.h>
 
 #import <AdLimeSdk/AdLimeNetwork.h>
+#import <AdLimeSdk/AdLimeNetworkConfig.h>
+#import <AdLimeSdk/AdLimeNetworkConfigs.h>
 
 #import <AdLimeSdk/AdLimeObjectCache.h>
 #import <AdLimeSdk/AdLimePluginUtil.h>
 
 #import <AdLimeSdk/AdLimeRewardedVideoAd.h>
+#import <AdLimeSdk/AdLimeRewardedVideoAdDelegate.h>
 #import <AdLimeSdk/AdLimeRewardItem.h>
 
 #import <AdLimeSdk/AdLimeSplashAd.h>

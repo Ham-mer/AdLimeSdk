@@ -8,6 +8,7 @@
 #import "AdLimeBannerViewDelegate.h"
 #import "AdLimeBannerAdPosition.h"
 #import "AdLimeILineItem.h"
+#import "AdLimeNetworkConfigs.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -32,6 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) AdLimeBannerAdWillLeaveApplicationCallback willLeaveCallback;
 /// Unity End
 
+- (void)setNetworkConfigs:(AdLimeNetworkConfigs *)configs;
 - (void)setHE;
 - (BOOL)isReady;
 - (void)destroy;

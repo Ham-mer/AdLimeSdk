@@ -1,6 +1,9 @@
-//
-//  AdLimeInterstitialAd.h
-//
+/*!
+@header AdLimeInterstitialAd
+@abstract AdLime Interstitial Ad
+@author TaurusX
+@version 1.3.5
+*/
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -11,13 +14,28 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-// AdLimeInnerInterstitialAdDelegate 必须在这里声明
+/*!
+@class AdLimeInterstitialAd
+@abstract AdLime Interstitial Ad class
+*/
 @interface AdLimeInterstitialAd : NSObject<AdLimeInnerInterstitialAdDelegate>
 
 @property(nonatomic, readonly) NSString *adUnitId;
 
 /// iOS Start
+/*!
+@method initWithAdUnitId
+@abstract initilize interstitial Ad
+@discussion
+@param adUnitId interstitial Ad ID in TaurusX platform
+@result AdLimeInterstitialAd instance
+*/
 - (AdLimeInterstitialAd *)initWithAdUnitId:(NSString *)adUnitId;
+
+/*!
+@property delegate
+@abstract delegate for AdLimeInterstitialAd event
+*/
 @property(nonatomic, weak) id<AdLimeInterstitialAdDelegate> delegate;
 /// iOS End
 

@@ -2,7 +2,7 @@
 //  AdLimeFeedListAdDelegate.h
 //  WeSdkiOS
 //
-//  Created by 王航 on 2019/10/9.
+//  Created by Matthew on 2019/10/9.
 //  Copyright © 2019年 AdLime. All rights reserved.
 //
 

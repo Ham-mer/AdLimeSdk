@@ -1,6 +1,9 @@
-//
-//  AdLimeBannerAd.h
-//
+/*!
+@header AdLimeBannerView
+@abstract Banner View headler
+@author TaurusX
+@version 1.3.5
+*/
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -12,12 +15,29 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/*!
+@class AdLimeBannerView
+@abstract Banner View class
+*/
 @interface AdLimeBannerView : UIView
 
 @property(nonatomic, readonly) NSString *adUnitId;
 
 /// iOS Start
+/*!
+@method initWithAdUnitId
+@abstract initilize banner Ad
+@discussion
+@param adUnitId banner Ad ID in TaurusX platform
+@param viewController the viewcontroller to display banner
+@result AdLimeBannerView instance
+*/
 - (id)initWithAdUnitId:(NSString *)adUnitId rootViewController:(UIViewController *)viewController;
+
+/*!
+@property delegate
+@abstract delegate for AdLimeBannerView event
+*/
 @property(nonatomic, weak) id<AdLimeBannerViewDelegate> delegate;
 /// iOS End
 
@@ -33,12 +53,47 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) AdLimeBannerAdWillLeaveApplicationCallback willLeaveCallback;
 /// Unity End
 
+/*!
+@method setNetworkConfigs
+@abstract set network configs
+@discussion
+@param configs banner Ad ID
+@result void
+*/
 - (void)setNetworkConfigs:(AdLimeNetworkConfigs *)configs;
+/*!
+@method setHE
+@abstract set hight ecpm mode
+@discussion
+@param void
+@result void
+*/
 - (void)setHE;
+/*!
+@method isReady
+@abstract check banner ad is ready
+@discussion
+@param void
+@result true: banner is ready, false: no banner
+*/
 - (BOOL)isReady;
+/*!
+@method destroy
+@abstract destory the banner Ad
+@discussion
+@param void
+@result void
+*/
 - (void)destroy;
 
 /// iOS Start
+/*!
+@method loadAd
+@abstract load banner Ad
+@discussion
+@param void
+@result void
+*/
 - (void)loadAd;
 /// iOS End
 
@@ -48,8 +103,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)showUnity:(AdLimeBannerAdPosition)position;
 - (void)showUnityWithX:(int)x andY:(int)y;
 
-- (void)showUnity:(AdLimeBannerAdPosition)position inNetworks:(nonnull int[])networkIds;
-- (void)showUnityWithX:(int)x andY:(int)y inNetworks:(nonnull int[])networkIds;
+- (void)showUnity:(AdLimeBannerAdPosition)position inNetworks:(nonnull int[])networkIds DEPRECATED_MSG_ATTRIBUTE("");
+- (void)showUnityWithX:(int)x andY:(int)y inNetworks:(nonnull int[])networkIds DEPRECATED_MSG_ATTRIBUTE("");
 
 - (void)setUnityPosition:(AdLimeBannerAdPosition)position;
 - (void)setUnityPositionWithX:(int)x andY:(int)y;

@@ -7,6 +7,7 @@
 #import "AdLimeTrackerDelegate.h"
 #import "AdLimeILineItem.h"
 #import "AdLimeTypes.h"
+#import "AdLimeAdError.h"
 
 @interface AdLimeTracker : NSObject
 
@@ -41,7 +42,7 @@
 - (void)trackAdShown:(AdLimeILineItem *)lineItem;
 - (void)trackAdClicked:(AdLimeILineItem *)lineItem;
 - (void)trackAdClosed:(AdLimeILineItem *)lineItem;
-- (void)trackAdFailedToLoad:(AdLimeILineItem *)lineItem;
+- (void)trackAdFailedToLoad:(AdLimeILineItem *)lineItem adError:(AdLimeAdError *)adError;
 - (void)trackVideoStarted:(AdLimeILineItem *)lineItem;
 - (void)trackVideoCompleted:(AdLimeILineItem *)lineItem;
 - (void)trackRewarded:(AdLimeILineItem *)lineItem;

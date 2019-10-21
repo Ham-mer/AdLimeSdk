@@ -1,17 +1,35 @@
-//
-//  AdError.h
-//
+/*!
+@header AdLimeAdError
+@abstract error class
+@author TaurusX
+@version 1.3.5 2019/1017
+*/
 
 #import "AdLimeNetwork.h"
 
+
+/*!
+@enum AdLimeAdErrorCode
+@abstract error code
+@constant ADLIME_ADERROR_INTERNAL_ERROR  interal error
+@constant ADLIME_ADERROR_INVALID_REQUEST invalid request
+@constant ADLIME_ADERROR_NETWORK_ERROR  network error
+@constant ADLIME_ADERROR_NO_FILL no fill
+@constant ADLIME_ADERROR_TIMEOUT  timeout
+*/
 typedef NS_ENUM(NSUInteger, AdLimeAdErrorCode) {
-    ADLIME_ADERROR_INTERNAL_ERROR = 0, // 内部错误
-    ADLIME_ADERROR_INVALID_REQUEST = 1, // 无效请求，请求过于频繁等，广告位无效等
-    ADLIME_ADERROR_NETWORK_ERROR = 2, // 网络错误
-    ADLIME_ADERROR_NO_FILL = 3, // 无广告填充
-    ADLIME_ADERROR_TIMEOUT = 4 // 超时
+    ADLIME_ADERROR_INTERNAL_ERROR = 0, // internal error
+    ADLIME_ADERROR_INVALID_REQUEST = 1, // invalid request include adunit is invalid and Request too frequently etc.
+    ADLIME_ADERROR_NETWORK_ERROR = 2, // network error
+    ADLIME_ADERROR_NO_FILL = 3, // no fill
+    ADLIME_ADERROR_TIMEOUT = 4 // timeout
 };
 
+
+/*!
+@class AdLimeAdError
+@abstract error class in AdLime
+*/
 @interface AdLimeAdError : NSObject
 
 +(AdLimeAdError *)InternalError;
@@ -20,6 +38,14 @@ typedef NS_ENUM(NSUInteger, AdLimeAdErrorCode) {
 +(AdLimeAdError *)NoFill;
 +(AdLimeAdError *)TimeOut;
 
+-(BOOL)isNetworkError;
+
+/*!
+@method getCode
+@abstract get error code
+@param void
+@result Error Code
+*/
 -(AdLimeAdErrorCode)getCode;
 -(AdLimeAdError *)appendErrorCode:(int)errorCode;
 -(AdLimeAdError *)appendErrorMessage:(NSString *)message;
@@ -30,5 +56,7 @@ typedef NS_ENUM(NSUInteger, AdLimeAdErrorCode) {
 -(AdLimeAdError *)innerAdUnitName:(NSString *)adUnitName;
 -(AdLimeAdError *)innerAdUnitId:(NSString *)adUnitId;
 -(AdLimeAdError *)innerLineItemParams:(NSString *)lineItemParams;
+
+-(NSString *)getEventResultValue;
 
 @end

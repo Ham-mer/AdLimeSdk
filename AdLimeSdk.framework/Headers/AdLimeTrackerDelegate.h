@@ -5,49 +5,100 @@
 
 #import "AdLimeTrackerInfo.h"
 
+/*!
+Delegate that receives ad loading process of LineItem.
+*/
 @protocol AdLimeTrackerDelegate<NSObject>
 
-// 请求广告
+/*!
+@brief Notified when start loading ad.
+@see AdLimeTrackerInfo
+@param trackInfo Info of requested LineItem.
+*/
 @optional
 - (void)adLimeTrackAdRequest:(AdLimeTrackerInfo *)trackInfo;
 
-// 请求广告成功
+/*!
+ @brief Notified when ad loaded success.
+ @see AdLimeTrackerInfo
+ @param trackInfo Info of loaded LineItem.
+ */
 @optional
 - (void)adLimeTrackAdLoaded:(AdLimeTrackerInfo *)trackInfo;
 
-// App 展示广告
+/*!
+ @brief Notified when ad is displayed on the page. Displayed means ad was on UI.
+ @see AdLimeTrackerInfo
+ @param trackInfo Info of displayed LineItem.
+ */
 @optional
 - (void)adLimeTrackAdCallShow:(AdLimeTrackerInfo *)trackInfo;
 
-// 广告得到展示
+/*!
+ @brief Notified when ad was shown. Shown means Network Sdk delegate ad shown.
+ @see AdLimeTrackerInfo
+ @param trackInfo Info of shown LineItem.
+ */
 @optional
 - (void)adLimeTrackAdShown:(AdLimeTrackerInfo *)trackInfo;
 
-// 点击广告
+/*!
+ @brief Notified when ad was clicked.
+ @see AdLimeTrackerInfo
+ @param trackInfo Info of clicked LineItem.
+ */
 @optional
 - (void)adLimeTrackAdClicked:(AdLimeTrackerInfo *)trackInfo;
 
-// 广告关闭
+/*!
+ @brief Notified when ad was closed.
+ @see AdLimeTrackerInfo
+ @param trackInfo Info of closed LineItem.
+ */
 @optional
 - (void)adLimeTrackAdClosed:(AdLimeTrackerInfo *)trackInfo;
 
-// 请求广告失败
+/*!
+ @brief Notified when ad failed to load.
+ @see AdLimeTrackerInfo
+ @param trackInfo Info of LineItem failed to load.
+ */
 @optional
 - (void)adLimeTrackAdFailedToLoad:(AdLimeTrackerInfo *)trackInfo;
 
-// 激励视频开始播放
+/*!
+ @brief Notified when RewardedVideo ad start playing.
+ @warning Only delegate for RewardedVideo ad.
+ @see AdLimeTrackerInfo
+ @param trackInfo Info of LineItem start playing.
+ */
 @optional
 - (void)adLimeTrackAdVideoStarted:(AdLimeTrackerInfo *)trackInfo;
 
-// 激励视频播放结束
+/*!
+ @brief Notified when RewardedVideo ad finish playing.
+ @warning Only delegate for RewardedVideo ad.
+ @see AdLimeTrackerInfo
+ @param trackInfo Info of LineItem completed playing.
+ */
 @optional
 - (void)adLimeTrackAdVideoCompleted:(AdLimeTrackerInfo *)trackInfo;
 
-// 激励成功
+/*!
+ @brief Notified when RewardedVideo ad rewarded success.
+ @warning Only delegate for RewardedVideo ad.
+ @see AdLimeTrackerInfo
+ @param trackInfo Info of rewarded LineItem.
+ */
 @optional
 - (void)adLimeTrackAdRewarded:(AdLimeTrackerInfo *)trackInfo;
 
-// 激励失败
+/*!
+ @brief Notified when RewardedVideo ad failed to rewarded.
+ @warning Only delegate for RewardedVideo ad.
+ @see AdLimeTrackerInfo
+ @param trackInfo Info of LineItem failed to reward.
+ */
 @optional
 - (void)adLimeTrackAdRewardFailed:(AdLimeTrackerInfo *)trackInfo;
 

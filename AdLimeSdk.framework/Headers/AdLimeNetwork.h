@@ -5,6 +5,9 @@
 
 #import <Foundation/Foundation.h>
 
+/*！
+ Id of Network supported by SDK.
+ */
 typedef NS_ENUM(NSInteger, AdLimeNetworkId) {
     UNKNOWN = 0,
     ADCOLONY = 1,
@@ -43,9 +46,20 @@ typedef NS_ENUM(NSInteger, AdLimeNetworkId) {
     ZHONGHUI_ADS = 34
 };
 
+/*!
+ Network supported by SDK.
+ */
 @interface AdLimeNetwork : NSObject
 
+/*!
+ @brief Id of Network.
+ @see AdLimeNetworkId
+ */
 @property int mid;
+
+/*!
+ @brief Name of Network.
+ */
 @property NSString *name;
 
 +(AdLimeNetwork *)fromId: (int) networkId;

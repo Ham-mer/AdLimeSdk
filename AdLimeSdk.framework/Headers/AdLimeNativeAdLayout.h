@@ -84,4 +84,15 @@ typedef void (^ratingCallback)(double rating);
 
 -(NSMutableArray<UIView *> *)getInteractiveViewArray;
 
++ (instancetype)getSmallLayoutWithWidth:(CGFloat) frameWidth;
++ (instancetype)getMediumLayoutWithWidth:(CGFloat) frameWidth;
++ (instancetype)getLargeLayout1WithWidth:(CGFloat) frameWidth;
++ (instancetype)getLargeLayout2WithWidth:(CGFloat) frameWidth;
++ (instancetype)getLargeLayout3WithWidth:(CGFloat) frameWidth;
++ (instancetype)getLargeLayout4WithWidth:(CGFloat) frameWidth;
++ (instancetype)getFullLayout1;
++ (instancetype)getFullLayout2;
++ (instancetype)getFullLayout3;
++ (instancetype)getFullLayout4;
+
 @end

@@ -1,65 +1,60 @@
-/*!
-@header AdLime
-@abstract AdLime  Mobile Ads SDK
-@author TaurusX
-@version 1.3.5
-*/
-
 #import <Foundation/Foundation.h>
 #import "AdLimeNetworkConfigs.h"
 
 /*!
-@class AdLime
-@abstract AdLime
+Class contains logic that applies to the SDK as a whole.
 */
 @interface AdLime : NSObject
 
 /*!
-@method initWithAppId
-@abstract initlize sdk with AppId
-@discussion
-@param appId  APP ID in TaurusX platform
-@result void
+@brief Initialize SDK with App Id.
+@param appId App ID in SDK platform.
 */
-+ (void) initWithAppId: (NSString *)appId;
++ (void)initWithAppId: (NSString *)appId;
+
+/*!
+ @brief Get the App Id used in initialization.
+ @return NSString
+ */
 + (NSString *)getAppId;
 
 /*!
-@method setTestMode
-@abstract set test mode
-@discussion
-@param testMode  true: Test model, false:
-@result void
+ @brief Set whether user consent GDPR. You can setGdprConsent at anytime if user changed their choices.
+ @param consent YES if user consent, NO otherwise
+ */
++ (void)setGdprConsent:(BOOL) consent;
+
+/*!
+ @brief Indicates whether user consent GDPR.
+ @result BOOL
+ */
++ (BOOL)isGdprConsent;
+
+/*!
+@brief Set whether to request test ads from SDK.
+@warning Test mode will not effect Network ad requesting.
+@param testMode YES if request test ads, NO otherwise
 */
 + (void)setTestMode:(BOOL)testMode;
 
 /*!
-@method setLogEnable
-@abstract set print the log
-@discussion
-@param enable  true: enable log, false: disable log
-@result void
-*/
+ @brief Set whether to print log on Xcode console output.
+ @param enable YES if print log, NO otherwise
+ */
 + (void)setLogEnable:(BOOL)enable;
 
 /*!
-@method setGdprConsent
-@abstract set Gdpr
-@discussion
-@param consent  true:
-@result void
-*/
-+ (void) setGdprConsent:(BOOL) consent;
-+ (BOOL) isGdprConsent;
+ @brief Set global NetworkConfigs, the config will be sent to Network SDK.
+ @warning Please set configs before load ads.
+ @see AdLimeNetworkConfigs
+ @param configs Global NetworkConfigs of Networks.
+ */
++ (void)setGlobalNetworkConfigs:(AdLimeNetworkConfigs *)configs;
 
 /*!
-@method setGlobalNetworkConfigs
-@abstract set Global NetworkConfigs
-@discussion
-@param configs network configs
-@result void
-*/
-+ (void)setGlobalNetworkConfigs:(AdLimeNetworkConfigs *)configs;
+ @brief Get setted global NetworkConfigs.
+ @result AdLimeNetworkConfigs
+ */
 + (AdLimeNetworkConfigs *)getGlobalNetworkConfigs;
 
 @end

@@ -9,19 +9,35 @@
 #import "AdLimeTypes.h"
 #import "AdLimeAdError.h"
 
+/*!
+Track loading ad process of every LineItem.
+*/
 @interface AdLimeTracker : NSObject
 
+/*!
+@brief Get AdLimeTracker Instance.
+@return AdLimeTracker
+*/
 + (AdLimeTracker *)getInstance;
 
-/// iOS Start
+/*!
+@brief Register delegate to listen ad loading process of LineItem.
+@warning Register delegate before loading ads.
+@param delegate AdLimeTrackerDelegate that receives ad loading process event
+*/
 - (void)registerDelegate: (id <AdLimeTrackerDelegate>)delegate;
-- (void)unRegisterDelegate: (id <AdLimeTrackerDelegate>)delegate;
-/// iOS End
 
-/// Unity Start
-/// A reference to the Unity tracker client.
+/*!
+@brief UnRegister delegate when app exit of finish listening ad loading.
+@param delegate AdLimeTrackerDelegate registered before.
+*/
+- (void)unRegisterDelegate: (id <AdLimeTrackerDelegate>)delegate;
+
+
+// Unity Start
+// A reference to the Unity tracker client.
 @property(nonatomic, assign) AdLimeTypeTrackerClientRef *trackerClient;
-/// The tracker callback into Unity.
+// The tracker callback into Unity.
 @property(nonatomic, assign) AdLimeTrackAdRequestCallback adRequestCallback;
 @property(nonatomic, assign) AdLimeTrackAdLoadedCallback adLoadedCallback;
 @property(nonatomic, assign) AdLimeTrackAdCallShowCallback adCallShowCallback;
@@ -33,9 +49,8 @@
 @property(nonatomic, assign) AdLimeTrackVideoCompletedCallback videoCompletedCallback;
 @property(nonatomic, assign) AdLimeTrackRewardedCallback rewardedCallback;
 @property(nonatomic, assign) AdLimeTrackRewardFailedCallback rewardFailedCallback;
-/// Unity End
 
-/// Common Start
+
 - (void)trackAdRequest:(AdLimeILineItem *)lineItem;
 - (void)trackAdLoaded:(AdLimeILineItem *)lineItem;
 - (void)trackAdCallShow:(AdLimeILineItem *)lineItem;
@@ -47,6 +62,5 @@
 - (void)trackVideoCompleted:(AdLimeILineItem *)lineItem;
 - (void)trackRewarded:(AdLimeILineItem *)lineItem;
 - (void)trackRewardFailed:(AdLimeILineItem *)lineItem;
-/// Common End
 
 @end

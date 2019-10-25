@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "AdLimeNetworkConfig.h"
 
-/*！
- 
+/*!
+ NetworkConfigs enable set special config of Network.
  */
 @interface AdLimeNetworkConfigs : NSObject
 

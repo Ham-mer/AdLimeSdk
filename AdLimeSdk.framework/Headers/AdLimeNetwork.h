@@ -5,7 +5,7 @@
 
 #import <Foundation/Foundation.h>
 
-/*！
+/*!
  Id of Network supported by SDK.
  */
 typedef NS_ENUM(NSInteger, AdLimeNetworkId) {
@@ -43,7 +43,8 @@ typedef NS_ENUM(NSInteger, AdLimeNetworkId) {
 	MAIO = 31,
     ALIGAMES = 32,
     CRITEO = 33,
-    ZHONGHUI_ADS = 34
+    ZHONGHUI_ADS = 34,
+    TMS = 35
 };
 
 /*!

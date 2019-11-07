@@ -1,6 +1,6 @@
 //
 //  AdLimeAdType.h
-//  Created by Matthew on 2019/6/15.
+//  Created by AdLimeSdk on 2019/6/15.
 //
 
 #import <Foundation/Foundation.h>

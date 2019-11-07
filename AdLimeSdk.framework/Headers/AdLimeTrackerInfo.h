@@ -1,6 +1,6 @@
 //
 //  AdLimeTrackerInfo.h
-//  Created by Matthew on 2019/7/14.
+//  Created by AdLimeSdk on 2019/7/14.
 //
 
 #import <Foundation/Foundation.h>
@@ -12,9 +12,19 @@ Info of LineItem when tracking loading ad process.
 @interface AdLimeTrackerInfo : NSObject
 
 /*!
- @brief eCPM of LineItem
+ @brief Id of SDK platform AdUnit.
  */
-@property float eCPM;
+@property NSString *adUnitId;
+
+/*!
+ @brief Name of SDK platform AdUnit.
+ */
+@property NSString *adUnitName;
+
+/*!
+ @brief AdType of LienItem. For example: Banner, Interstitial, Native and so on.
+ */
+@property int adType;
 
 /*!
  @brief Id of Network the LineItem belonged.
@@ -23,19 +33,14 @@ Info of LineItem when tracking loading ad process.
 @property int networkId;
 
 /*!
- @brief AdUnitId of LineItem. For example: AdMob AdUnit ID, Facebook Placenent ID and so on.
+ @brief AdUnitId of LineItem. For example: AdMob AdUnit ID, Facebook Placement ID and so on.
  */
-@property NSString *lineItemAdUnitId;
+@property NSString *networkAdUnitId;
 
 /*!
- @brief AdUnitId of SDK platform AdUnit.
+ @brief eCPM of LineItem
  */
-@property NSString *adUnitId;
-
-/*!
- @brief AdType of LienItem. For example: Banner, Interstitial, Native and so on.
- */
-@property int adType;
+@property float eCPM;
 
 - (AdLimeTrackerInfo *)initWithLineItem:(AdLimeILineItem *)lineItem;
 

@@ -14,6 +14,7 @@ FOUNDATION_EXPORT const unsigned char AdLimeSdkVersionString[];
 
 #import <AdLimeSdk/AdLimeAdError.h>
 #import <AdLimeSdk/AdLimeAdType.h>
+#import <AdLimeSdk/AdLimeAdUnitInfo.h>
 
 #import <AdLimeSdk/AdLimeBannerAdSize.h>
 #import <AdLimeSdk/AdLimeBannerView.h>
@@ -29,6 +30,12 @@ FOUNDATION_EXPORT const unsigned char AdLimeSdkVersionString[];
 
 #import <AdLimeSdk/AdLimeInterstitialAd.h>
 #import <AdLimeSdk/AdLimeInterstitialAdDelegate.h>
+
+#import <AdLimeSdk/AdLimeMixViewAd.h>
+#import <AdLimeSdk/AdLimeMixViewAdDelegate.h>
+
+#import <AdLimeSdk/AdLimeMixFullScreenAd.h>
+#import <AdLimeSdk/AdLimeMixFullScreenAdDelegate.h>
 
 #import <AdLimeSdk/AdLimeNativeAd.h>
 #import <AdLimeSdk/AdLimeNativeAdLayout.h>

@@ -2,8 +2,8 @@
 //  AdLimeNetworkConfig.h
 //  AdLimeSdk
 //
-//  Created by Matthew on 2019/10/8.
-//  Copyright © 2019年 AdLime. All rights reserved.
+//  Created by AdLimeSdk on 2019/10/8.
+//  Copyright © 2019年 AdLimeSdk. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

@@ -1,6 +1,6 @@
 //
 //  AdLimeILinItem.h
-//  Created by Matthew on 2019/6/24.
+//  Created by AdLimeSdk on 2019/6/24.
 //
 
 #import <Foundation/Foundation.h>

@@ -2,7 +2,7 @@
 //  AdLimeBannerAdPosition.h
 //
 
-/// Positions to place an banner ad on Unity Platform.
+// Positions to place an banner ad on Unity Platform.
 typedef NS_ENUM(NSInteger, AdLimeBannerAdPosition) {
     AdLimeBannerAdPos_Custom = -1,      // Custom ad position: (x,y)
     AdLimeBannerAdPos_Top = 0,          // Top of screen.

@@ -24,6 +24,7 @@ Class contains logic that applies to the SDK as a whole.
  */
 + (void)setGdprConsent:(BOOL) consent;
 
+
 /*!
  @brief Indicates whether user consent GDPR.
  @result BOOL
@@ -56,5 +57,12 @@ Class contains logic that applies to the SDK as a whole.
  @result AdLimeNetworkConfigs
  */
 + (AdLimeNetworkConfigs *)getGlobalNetworkConfigs;
+
+
+/*!
+@brief set test server url  (just for specified developer)
+@param url server url.
+*/
++ (void)setTestServer:(NSString *)url;
 
 @end

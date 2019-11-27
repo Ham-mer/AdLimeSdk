@@ -40,6 +40,7 @@ FOUNDATION_EXPORT const unsigned char AdLimeSdkVersionString[];
 #import <AdLimeSdk/AdLimeNativeAd.h>
 #import <AdLimeSdk/AdLimeNativeAdLayout.h>
 #import <AdLimeSdk/AdLimeNativeAdDelegate.h>
+#import <AdLimeSdk/AdLimeNativeAdViewRender.h>
 
 #import <AdLimeSdk/AdLimeNetwork.h>
 #import <AdLimeSdk/AdLimeNetworkConfig.h>

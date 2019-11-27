@@ -348,6 +348,9 @@ typedef void (^ratingCallback)(double rating);
 */
 -(NSMutableArray<UIView *> *)getInteractiveViewArray;
 
+-(BOOL)hasInteractiveArea;
+
++(AdLimeNativeAdLayout *)fromUnityLayout:(NSString *)layoutName;
 
 /*!
 @method getSmallLayoutWithWidth

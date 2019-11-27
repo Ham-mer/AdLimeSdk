@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 */
 @property(nonatomic, readonly) NSString *adUnitId;
 
-/// iOS Start
+// iOS Start
 /*!
 @method initWithAdUnitId
 @abstract initilize interstitial Ad
@@ -33,9 +33,9 @@ NS_ASSUME_NONNULL_BEGIN
 @abstract Optional delegate object that receives state change notifications from this AdLimeInterstitialAd
 */
 @property(nonatomic, weak) id<AdLimeInterstitialAdDelegate> delegate;
-/// iOS End
+// iOS End
 
-/// Unity Start
+// Unity Start
 - (id)initWithInterstitialClientReference:(AdLimeTypeInterstitialClientRef _Nullable* _Nullable)interstitialClient adUnitId:(NSString *)adUnitId;
 /// A reference to the Unity interstitial client.
 @property(nonatomic, assign) AdLimeTypeInterstitialClientRef _Nullable* _Nullable interstitialClient;
@@ -45,7 +45,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) AdLimeInterstitialWillPresentScreenCallback willPresentCallback;
 @property(nonatomic, assign) AdLimeInterstitialDidDismissScreenCallback didDismissCallback;
 @property(nonatomic, assign) AdLimeInterstitialWillLeaveApplicationCallback willLeaveCallback;
-/// Unity End
+// Unity End
 
 /*!
 @method setNetworkConfigs
@@ -94,10 +94,10 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)showFromViewController:(nullable UIViewController *)viewController;
 
 
-/// Unity Start
+// Unity Start
 - (void)showUnity;
 - (void)showUnity:(nullable int [])networkIds;
-/// Unity End
+// Unity End
 
 @end
 

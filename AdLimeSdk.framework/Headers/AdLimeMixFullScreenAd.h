@@ -4,6 +4,7 @@
 #import "AdLimeMixFullScreenAdDelegate.h"
 #import "AdLimeNetworkConfigs.h"
 #import "AdLimeNativeAdLayout.h"
+#import "AdLimeInnerMixFullScreenAdDelegate.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -11,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @class AdLimeMixFullScreenAd
 @abstract AdLime MixFullScreen Ad class
 */
-@interface AdLimeMixFullScreenAd : NSObject
+@interface AdLimeMixFullScreenAd : NSObject<AdLimeInnerMixFullScreenAdDelegate>
 
 /*!
 @property adUnitId
@@ -50,6 +51,13 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)setNetworkConfigs:(AdLimeNetworkConfigs *)configs;
 
 /*!
+ @method setCL
+ @abstract set cycle load model
+ @param cacheCount NSInteger cached ad count
+ */
+- (void)setCL:(int)cacheCount;
+
+/*!
 @method loadAd
 @abstract Makes an mixFullScreen ad request.
 */
@@ -74,6 +82,22 @@ NS_ASSUME_NONNULL_BEGIN
 @param viewController Set rootViewController to the current view controller at the time this method is called. If your application does not use view controllers pass in nil and your views will be removed from the window to show the mixFullScreen and restored when done. After the mixFullScreen has been removed, the delegate's mixFullScreenDidDismissScreen: will be called.
 */
 - (void)showFromViewController:(nullable UIViewController *)viewController;
+
+// Unity Start
+- (id)initWithMixFullScreenClientReference:(AdLimeTypeMixFullScreenClientRef _Nullable* _Nullable)mixFullScreenClient adUnitId:(NSString *)adUnitId;
+/// A reference to the Unity MixFullScreen client.
+@property(nonatomic, assign) AdLimeTypeMixFullScreenClientRef _Nullable* _Nullable mixFullScreenClient;
+/// The ad callback into Unity.
+@property(nonatomic, assign) AdLimeMixFullScreenAdDidReceiveAdCallback adReceivedCallback;
+@property(nonatomic, assign) AdLimeMixFullScreenAdDidFailToReceiveAdWithErrorCallback adFailedCallback;
+@property(nonatomic, assign) AdLimeMixFullScreenAdWillPresentScreenCallback willPresentCallback;
+@property(nonatomic, assign) AdLimeMixFullScreenAdDidDismissScreenCallback didDismissCallback;
+@property(nonatomic, assign) AdLimeMixFullScreenAdWillLeaveApplicationCallback willLeaveCallback;
+// Unity End
+
+// Unity Start
+- (void)showUnity;
+// Unity End
 
 @end
 

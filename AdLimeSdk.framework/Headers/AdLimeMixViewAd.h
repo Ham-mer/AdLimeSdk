@@ -10,6 +10,8 @@
 #import "AdLimeNetworkConfigs.h"
 #import "AdLimeMixViewAdDelegate.h"
 #import "AdLimeNativeAdLayout.h"
+#import "AdLimeTypes.h"
+#import "AdLimeBannerAdPosition.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -34,6 +36,18 @@ NS_ASSUME_NONNULL_BEGIN
 @abstract Optional delegate object that receives state change notifications from this AdLimeMixViewAd
 */
 @property(nonatomic, weak, nullable) id<AdLimeMixViewAdDelegate> delegate;
+
+// Unity Start
+- (id)initWithMixViewClientReference:(AdLimeTypeMixViewClientRef _Nullable* _Nullable)mixViewClient adUnitId:(NSString *)adUnitId rootViewController:(UIViewController *)viewController;
+// 引用 Unity 的 MixViewClient
+@property(nonatomic, assign) AdLimeTypeMixViewClientRef _Nullable* _Nullable mixViewClient;
+// 广告加载后，回调到 Unity 的接口
+@property(nonatomic, assign) AdLimeMixViewAdDidReceiveAdCallback adReceivedCallback;
+@property(nonatomic, assign) AdLimeMixViewAdDidFailToReceiveAdWithErrorCallback adFailedCallback;
+@property(nonatomic, assign) AdLimeMixViewAdWillPresentScreenCallback willPresentCallback;
+@property(nonatomic, assign) AdLimeMixViewAdDidDismissScreenCallback didDismissCallback;
+@property(nonatomic, assign) AdLimeMixViewAdWillLeaveApplicationCallback willLeaveCallback;
+// Unity End
 
 /*!
 @method setNativeAdLayout
@@ -81,6 +95,22 @@ NS_ASSUME_NONNULL_BEGIN
 @abstract destory the ad request.
 */
 - (void)destroy;
+
+// Unity Start
+- (void)loadAdUnity;
+
+- (void)showUnity:(AdLimeBannerAdPosition)position;
+- (void)showUnityWithX:(int)x andY:(int)y;
+- (void)showUnityRelative:(AdLimeBannerAdPosition)position withX:(int)x andY:(int)y;
+
+- (void)setUnityPosition:(AdLimeBannerAdPosition)position;
+- (void)setUnityPositionWithX:(int)x andY:(int)y;
+- (void)setUnityPositionRelative:(AdLimeBannerAdPosition)position withX:(int)x andY:(int)y;
+
+- (void)hideUnity;
+
+- (void)removeUnity;
+// Unity End
 
 @end
 

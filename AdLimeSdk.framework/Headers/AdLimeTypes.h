@@ -49,6 +49,35 @@ typedef void (*AdLimeRewardVideoDidRewardCallback)(AdLimeTypeRewardedVideoClient
 typedef void (*AdLimeRewardVideoDidFailedToRewardCallback)(AdLimeTypeRewardedVideoClientRef *rewardedVideoClient);
 
 
+/// MixViewAd
+// 对 Unity 中 MixViewAd 和 MixViewClient 的引用。
+typedef const void *AdLimeTypeMixViewClientRef;
+typedef const void *AdLimeTypeMixViewAdRef;
+// iOS AdLimeMixViewAd 加载后回调 Unity 的接口。
+typedef void (*AdLimeMixViewAdDidReceiveAdCallback)(AdLimeTypeMixViewClientRef *mixViewClient);
+typedef void (*AdLimeMixViewAdDidFailToReceiveAdWithErrorCallback)(AdLimeTypeMixViewClientRef *mixViewClient, int error, char *message);
+typedef void (*AdLimeMixViewAdWillPresentScreenCallback)(AdLimeTypeMixViewClientRef *mixViewClient);
+typedef void (*AdLimeMixViewAdDidDismissScreenCallback)(AdLimeTypeMixViewClientRef *mixViewClient);
+typedef void (*AdLimeMixViewAdWillLeaveApplicationCallback)(AdLimeTypeMixViewClientRef *mixViewClient);
+
+
+/// MixFullScreenAd
+// 对 Unity 中 MixFullScreenAd 和 MixFullScreenClient 的引用。
+typedef const void *AdLimeTypeMixFullScreenClientRef;
+typedef const void *AdLimeTypeMixFullScreenAdRef;
+// iOS AdLimeMixFullScreenAd 加载后回调 Unity 的接口。
+typedef void (*AdLimeMixFullScreenAdDidReceiveAdCallback)(AdLimeTypeMixFullScreenClientRef *mixFullScreenClient);
+typedef void (*AdLimeMixFullScreenAdDidFailToReceiveAdWithErrorCallback)(AdLimeTypeMixFullScreenClientRef *mixFullScreenClient, int error, char *message);
+typedef void (*AdLimeMixFullScreenAdWillPresentScreenCallback)(AdLimeTypeMixFullScreenClientRef *mixFullScreenClient);
+typedef void (*AdLimeMixFullScreenAdDidDismissScreenCallback)(AdLimeTypeMixFullScreenClientRef *mixFullScreenClient);
+typedef void (*AdLimeMixFullScreenAdWillLeaveApplicationCallback)(AdLimeTypeMixFullScreenClientRef *mixFullScreenClient);
+
+/// NativeAdLayout
+// 对 Unity 中 NativeAdLayout 的引用。
+typedef const void *AdLimeTypeNativeAdLayoutClientRef;
+typedef const void *AdLimeTypeNativeAdLayoutRef;
+
+
 /// AdLimeTracker
 typedef const void *AdLimeTypeTrackerClientRef;
 typedef const void *AdLimeTypeTrackerRef;

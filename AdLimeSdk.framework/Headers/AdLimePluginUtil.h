@@ -31,6 +31,9 @@
 /// 将 view 放在 parentView 的 (x, y) 位置。
 + (void)positionView:(UIView *)view inParentView:(UIView *)parentView withX:(int)x andY:(int)y;
 
+/// 将 view 放在 parentView 的 position 位置，向左偏移 x，想下偏移 y
++ (void)positionView:(UIView *)view inParentView:(UIView *)parentView adPosition:(AdLimeBannerAdPosition)position x:(int)x y:(int)y;
+
 /// Returns a GADAdSize for a specified width and height.
 //+ (GADAdSize)adSizeForWidth:(CGFloat)width height:(CGFloat)height;
 

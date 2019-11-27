@@ -6,15 +6,15 @@
 #import <Foundation/Foundation.h>
 
 typedef NS_ENUM(NSInteger, AdLimeAdTypeId) {
-    Unknown = 0,
-    Banner = 1,
-    Interstitial = 2,
-    Native = 3,
-    Rewarded_Video = 4,
-    MixView = 5,
-    MixFullScreen = 6,
-    Splash = 7,
-    FeedList = 8
+    ADTYPE_UNKNOWN = 0,
+    ADTYPE_BANNER = 1,
+    ADTYPE_INTERSTITIAL = 2,
+    ADTYPE_NATIVE = 3,
+    ADTYPE_REWARDED_VIDEO = 4,
+    ADTYPE_MIXVIEW = 5,
+    ADTYPE_MIXFULLSCREEN = 6,
+    ADTYPE_SPLASH = 7,
+    ADTYPE_FEEDLIST = 8
 };
 
 @interface AdLimeAdType : NSObject

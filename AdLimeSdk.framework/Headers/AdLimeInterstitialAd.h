@@ -4,6 +4,7 @@
 #import "AdLimeInterstitialAdDelegate.h"
 #import "AdLimeInnerInterstitialAdDelegate.h"
 #import "AdLimeNetworkConfigs.h"
+#import "AdLimeCLConfig.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -66,6 +67,13 @@ NS_ASSUME_NONNULL_BEGIN
 @param cacheCount NSInteger cached ad count
 */
 - (void)setCL:(int)cacheCount;
+
+/*!
+ @method setCLConfig
+ @abstract set cycle load model
+ @param config AdLimeCLConfig
+ */
+- (void)setCLConfig:(AdLimeCLConfig *)config;
 
 /*!
 @method loadAd

@@ -46,6 +46,7 @@ typedef NS_ENUM(NSInteger, AdLimeNetworkId) {
     ZHONGHUI_ADS = 34,
     TMS = 35,
     FIVE = 36,
+    KuaiShou = 37,
 };
 
 /*!

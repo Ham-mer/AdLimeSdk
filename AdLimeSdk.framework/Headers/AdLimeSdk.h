@@ -14,11 +14,15 @@ FOUNDATION_EXPORT const unsigned char AdLimeSdkVersionString[];
 
 #import <AdLimeSdk/AdLimeAdError.h>
 #import <AdLimeSdk/AdLimeAdType.h>
+
 #import <AdLimeSdk/AdLimeAdUnitInfo.h>
+#import <AdLimeSdk/AdLimeAdContentInfo.h>
 
 #import <AdLimeSdk/AdLimeBannerAdSize.h>
 #import <AdLimeSdk/AdLimeBannerView.h>
 #import <AdLimeSdk/AdLimeBannerViewDelegate.h>
+
+#import <AdLimeSdk/AdLimeCLConfig.h>
 
 #import <AdLimeSdk/AdLimeFeed.h>
 #import <AdLimeSdk/AdLimeFeedList.h>

@@ -15,20 +15,20 @@
 /*!
 @enum AdLimeFeedType
 @abstract feed type in feedlist ad
-@constant FEEDTYPE_UNKNOWN             unknown
-@constant FEEDTYPE_LARGE_IMAGE      large image
-@constant FEEDTYPE_SMALL_IMAGE      small image
-@constant FEEDTYPE_VERTICAL_IMAGE  vertical image
-@constant FEEDTYPE_GROUP_IMAGE     group image
-@constant FEEDTYPE_VIDEO                     video
+@constant ADLIME_FEEDTYPE_UNKNOWN             unknown
+@constant ADLIME_FEEDTYPE_LARGE_IMAGE      large image
+@constant ADLIME_FEEDTYPE_SMALL_IMAGE      small image
+@constant ADLIME_FEEDTYPE_VERTICAL_IMAGE  vertical image
+@constant ADLIME_FEEDTYPE_GROUP_IMAGE     group image
+@constant ADLIME_FEEDTYPE_VIDEO                     video
 */
 typedef NS_ENUM(NSUInteger, AdLimeFeedType) {
-    FEEDTYPE_UNKNOWN = 0, // unknown
-    FEEDTYPE_LARGE_IMAGE = 1, // large image
-    FEEDTYPE_SMALL_IMAGE = 2, // small image
-    FEEDTYPE_VERTICAL_IMAGE = 3, // vertical image
-    FEEDTYPE_GROUP_IMAGE = 4, // group image
-    FEEDTYPE_VIDEO = 5        // video
+    ADLIME_FEEDTYPE_UNKNOWN = 0, // unknown
+    ADLIME_FEEDTYPE_LARGE_IMAGE = 1, // large image
+    ADLIME_FEEDTYPE_SMALL_IMAGE = 2, // small image
+    ADLIME_FEEDTYPE_VERTICAL_IMAGE = 3, // vertical image
+    ADLIME_FEEDTYPE_GROUP_IMAGE = 4, // group image
+    ADLIME_FEEDTYPE_VIDEO = 5        // video
 };
 
 /*!

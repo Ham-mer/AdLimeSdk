@@ -8,11 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import "AdLimeAdType.h"
+#import "AdLimeAdContentInfo.h"
 
 @interface AdLimeAdUnitInfo : NSObject
 
-- (NSString *)getAdUnitId;
-- (NSString *)getAdUnitName;
-- (AdLimeAdTypeId)getAdUnitType;
+@property (nonatomic, strong) NSString *adUnitId;
+@property (nonatomic, strong) NSString *adUnitName;
+@property (nonatomic) AdLimeAdTypeId adUnitType;
+
+@property (nonatomic, strong)AdLimeAdContentInfo *adContentInfo;
+
 
 @end

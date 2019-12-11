@@ -5,6 +5,8 @@
 
 #import <Foundation/Foundation.h>
 #import "AdLimeILineItem.h"
+#import "AdLimeAdContentInfo.h"
+
 
 /*!
 Info of LineItem when tracking loading ad process.
@@ -42,6 +44,10 @@ Info of LineItem when tracking loading ad process.
  */
 @property float eCPM;
 
-- (AdLimeTrackerInfo *)initWithLineItem:(AdLimeILineItem *)lineItem;
+@property (nonatomic, strong) AdLimeAdContentInfo *adContentInfo;
+
+- (AdLimeTrackerInfo *)initWithLineItem:(AdLimeILineItem *)iLineItem;
+
+- (AdLimeTrackerInfo *)initWithLineItem:(AdLimeILineItem *)iLineItem adContentInfo: (AdLimeAdContentInfo *)contentInfo;
 
 @end

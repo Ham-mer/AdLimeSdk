@@ -83,41 +83,39 @@ typedef const void *AdLimeTypeNativeAdLayoutRef;
 typedef const void *AdLimeTypeCLConfigRef;
 
 
+/// TrackerInfo
+typedef const void *AdLimeTypeTrackerInfoRef;
+/// AdUnitInfo
+typedef const void *AdLimeTypeAdUnitInfoRef;
+/// AdContentInfo
+typedef const void *AdLimeTypeAdContentInfoRef;
+
+
 /// AdLimeTracker
 typedef const void *AdLimeTypeTrackerClientRef;
 typedef const void *AdLimeTypeTrackerRef;
 // LineItem Track
-typedef void (*AdLimeTrackAdRequestCallback)(AdLimeTypeTrackerClientRef *trackerClientRef,
-											float eCPM, int networkId, char *networkAdUnitId, char *adUnitId, char *adUnitName, int adType);
-typedef void (*AdLimeTrackAdLoadedCallback)(AdLimeTypeTrackerClientRef *trackerClientRef,
-											float eCPM, int networkId, char *networkAdUnitId, char *adUnitId, char *adUnitName, int adType);
-typedef void (*AdLimeTrackAdFailedToLoadCallback)(AdLimeTypeTrackerClientRef *trackerClientRef,
-                                                float eCPM, int networkId, char *networkAdUnitId, char *adUnitId, char *adUnitName, int adType);
-typedef void (*AdLimeTrackAdCallShowCallback)(AdLimeTypeTrackerClientRef *trackerClientRef,
-											float eCPM, int networkId, char *networkAdUnitId, char *adUnitId, char *adUnitName, int adType);
-typedef void (*AdLimeTrackAdShownCallback)(AdLimeTypeTrackerClientRef *trackerClientRef,
-											float eCPM, int networkId, char *networkAdUnitId, char *adUnitId, char *adUnitName, int adType);
-typedef void (*AdLimeTrackAdClickedCallback)(AdLimeTypeTrackerClientRef *trackerClientRef,
-											float eCPM, int networkId, char *networkAdUnitId, char *adUnitId, char *adUnitName, int adType);
-typedef void (*AdLimeTrackAdClosedCallback)(AdLimeTypeTrackerClientRef *trackerClientRef,
-											float eCPM, int networkId, char *networkAdUnitId, char *adUnitId, char *adUnitName, int adType);
-typedef void (*AdLimeTrackVideoStartedCallback)(AdLimeTypeTrackerClientRef *trackerClientRef,
-											float eCPM, int networkId, char *networkAdUnitId, char *adUnitId, char *adUnitName, int adType);
-typedef void (*AdLimeTrackVideoCompletedCallback)(AdLimeTypeTrackerClientRef *trackerClientRef,
-											float eCPM, int networkId, char *networkAdUnitId, char *adUnitId, char *adUnitName, int adType);
-typedef void (*AdLimeTrackRewardedCallback)(AdLimeTypeTrackerClientRef *trackerClientRef,
-											float eCPM, int networkId, char *networkAdUnitId, char *adUnitId, char *adUnitName, int adType);
-typedef void (*AdLimeTrackRewardFailedCallback)(AdLimeTypeTrackerClientRef *trackerClientRef,
-											 float eCPM, int networkId, char *networkAdUnitId, char *adUnitId, char *adUnitName, int adType);
+typedef void (*AdLimeTrackAdRequestCallback)(AdLimeTypeTrackerClientRef *trackerClientRef, AdLimeTypeTrackerInfoRef *trackerInfoRef);
+typedef void (*AdLimeTrackAdLoadedCallback)(AdLimeTypeTrackerClientRef *trackerClientRef, AdLimeTypeTrackerInfoRef *trackerInfoRef);
+typedef void (*AdLimeTrackAdFailedToLoadCallback)(AdLimeTypeTrackerClientRef *trackerClientRef, AdLimeTypeTrackerInfoRef *trackerInfoRef);
+typedef void (*AdLimeTrackAdCallShowCallback)(AdLimeTypeTrackerClientRef *trackerClientRef, AdLimeTypeTrackerInfoRef *trackerInfoRef);
+typedef void (*AdLimeTrackAdShownCallback)(AdLimeTypeTrackerClientRef *trackerClientRef, AdLimeTypeTrackerInfoRef *trackerInfoRef);
+typedef void (*AdLimeTrackAdClickedCallback)(AdLimeTypeTrackerClientRef *trackerClientRef, AdLimeTypeTrackerInfoRef *trackerInfoRef);
+typedef void (*AdLimeTrackAdClosedCallback)(AdLimeTypeTrackerClientRef *trackerClientRef, AdLimeTypeTrackerInfoRef *trackerInfoRef);
+typedef void (*AdLimeTrackVideoStartedCallback)(AdLimeTypeTrackerClientRef *trackerClientRef, AdLimeTypeTrackerInfoRef *trackerInfoRef);
+typedef void (*AdLimeTrackVideoCompletedCallback)(AdLimeTypeTrackerClientRef *trackerClientRef, AdLimeTypeTrackerInfoRef *trackerInfoRef);
+typedef void (*AdLimeTrackRewardedCallback)(AdLimeTypeTrackerClientRef *trackerClientRef, AdLimeTypeTrackerInfoRef *trackerInfoRef);
+typedef void (*AdLimeTrackRewardFailedCallback)(AdLimeTypeTrackerClientRef *trackerClientRef, AdLimeTypeTrackerInfoRef *trackerInfoRef);
 // AdUnit Track
-typedef void (*AdLimeTrackAdUnitRequestCallback)(AdLimeTypeTrackerClientRef *trackerClientRef, char *adUnitId, char *adUnitName, int adType);
-typedef void (*AdLimeTrackAdUnitLoadedCallback)(AdLimeTypeTrackerClientRef *trackerClientRef, char *adUnitId, char *adUnitName, int adType);
-typedef void (*AdLimeTrackAdUnitFailedToLoadCallback)(AdLimeTypeTrackerClientRef *trackerClientRef, char *adUnitId, char *adUnitName, int adType);
-typedef void (*AdLimeTrackAdUnitCallShowCallback)(AdLimeTypeTrackerClientRef *trackerClientRef, char *adUnitId, char *adUnitName, int adType);
-typedef void (*AdLimeTrackAdUnitShownCallback)(AdLimeTypeTrackerClientRef *trackerClientRef, char *adUnitId, char *adUnitName, int adType);
-typedef void (*AdLimeTrackAdUnitClickedCallback)(AdLimeTypeTrackerClientRef *trackerClientRef, char *adUnitId, char *adUnitName, int adType);
-typedef void (*AdLimeTrackAdUnitClosedCallback)(AdLimeTypeTrackerClientRef *trackerClientRef, char *adUnitId, char *adUnitName, int adType);
-typedef void (*AdLimeTrackAdUnitVideoStartedCallback)(AdLimeTypeTrackerClientRef *trackerClientRef, char *adUnitId, char *adUnitName, int adType);
-typedef void (*AdLimeTrackAdUnitVideoCompletedCallback)(AdLimeTypeTrackerClientRef *trackerClientRef, char *adUnitId, char *adUnitName, int adType);
-typedef void (*AdLimeTrackAdUnitRewardedCallback)(AdLimeTypeTrackerClientRef *trackerClientRef, char *adUnitId, char *adUnitName, int adType);
-typedef void (*AdLimeTrackAdUnitRewardFailedCallback)(AdLimeTypeTrackerClientRef *trackerClientRef, char *adUnitId, char *adUnitName, int adType);
+typedef void (*AdLimeTrackAdUnitRequestCallback)(AdLimeTypeTrackerClientRef *trackerClientRef, AdLimeTypeAdUnitInfoRef *adUnitInfoRef);
+typedef void (*AdLimeTrackAdUnitLoadedCallback)(AdLimeTypeTrackerClientRef *trackerClientRef, AdLimeTypeAdUnitInfoRef *adUnitInfoRef);
+typedef void (*AdLimeTrackAdUnitFailedToLoadCallback)(AdLimeTypeTrackerClientRef *trackerClientRef, AdLimeTypeAdUnitInfoRef *adUnitInfoRef);
+typedef void (*AdLimeTrackAdUnitCallShowCallback)(AdLimeTypeTrackerClientRef *trackerClientRef, AdLimeTypeAdUnitInfoRef *adUnitInfoRef);
+typedef void (*AdLimeTrackAdUnitShownCallback)(AdLimeTypeTrackerClientRef *trackerClientRef, AdLimeTypeAdUnitInfoRef *adUnitInfoRef);
+typedef void (*AdLimeTrackAdUnitClickedCallback)(AdLimeTypeTrackerClientRef *trackerClientRef, AdLimeTypeAdUnitInfoRef *adUnitInfoRef);
+typedef void (*AdLimeTrackAdUnitClosedCallback)(AdLimeTypeTrackerClientRef *trackerClientRef, AdLimeTypeAdUnitInfoRef *adUnitInfoRef);
+typedef void (*AdLimeTrackAdUnitVideoStartedCallback)(AdLimeTypeTrackerClientRef *trackerClientRef, AdLimeTypeAdUnitInfoRef *adUnitInfoRef);
+typedef void (*AdLimeTrackAdUnitVideoCompletedCallback)(AdLimeTypeTrackerClientRef *trackerClientRef, AdLimeTypeAdUnitInfoRef *adUnitInfoRef);
+typedef void (*AdLimeTrackAdUnitRewardedCallback)(AdLimeTypeTrackerClientRef *trackerClientRef, AdLimeTypeAdUnitInfoRef *adUnitInfoRef);
+typedef void (*AdLimeTrackAdUnitRewardFailedCallback)(AdLimeTypeTrackerClientRef *trackerClientRef, AdLimeTypeAdUnitInfoRef *adUnitInfoRef);
+

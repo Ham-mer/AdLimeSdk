@@ -23,6 +23,12 @@ typedef NS_ENUM(int, AdLimeAdContentType) {
     ADLIME_AD_CONTENT_TYPE_VIDEO                  //video
 };
 
+typedef NS_ENUM(int, AdLimeAdRenderType) {
+    ADLIME_AD_RENDER_UNKNOWN = 0, // unknown
+    ADLIME_AD_RENDER_CUSTOM = 1,  // custom
+    ADLIME_AD_RENDER_EXPRESS = 2 // express
+};
+
 @interface AdLimeAdContentInfo : NSObject
 
 @property(nonatomic, strong) NSString *title;
@@ -33,6 +39,8 @@ typedef NS_ENUM(int, AdLimeAdContentType) {
 
 @property(nonatomic) AdLimeAdIsApp isApp;
 @property(nonatomic) AdLimeAdContentType contentType;
+@property(nonatomic) AdLimeAdRenderType renderType;
+@property(nonatomic) int adMode;
 
 @property(nonatomic, strong) NSString *iconUrl;
 @property(nonatomic, strong) NSString *imageUrl;

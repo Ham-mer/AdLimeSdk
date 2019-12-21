@@ -33,7 +33,7 @@ typedef NS_ENUM(NSInteger, AdLimeNetworkId) {
     FLURRY = 21,
     TAPJOY = 22,
     _360 = 23,
-    XiaoMi = 24,
+    XIAOMI = 24,
     _4399 = 25,
     OPPO = 26,
     VIVO = 27,
@@ -46,7 +46,8 @@ typedef NS_ENUM(NSInteger, AdLimeNetworkId) {
     ZHONGHUI_ADS = 34,
     TMS = 35,
     FIVE = 36,
-    KuaiShou = 37,
+    KUAISHOU = 37,
+    IMOBILE = 38,
 };
 
 /*!

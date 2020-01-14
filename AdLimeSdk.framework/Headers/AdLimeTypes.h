@@ -83,6 +83,15 @@ typedef const void *AdLimeTypeNativeAdLayoutRef;
 typedef const void *AdLimeTypeCLConfigRef;
 
 
+/// NetworkConfigs
+typedef const void *AdLimeTypeNetworkConfigsRef;
+typedef const void *AdLimeTypeNetworkConfigRef;
+
+
+/// Segment
+typedef const void *AdLimeTypeSegmentRef;
+
+
 /// TrackerInfo
 typedef const void *AdLimeTypeTrackerInfoRef;
 /// AdUnitInfo

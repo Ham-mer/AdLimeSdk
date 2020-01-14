@@ -1,5 +1,6 @@
 #import <Foundation/Foundation.h>
 #import "AdLimeNetworkConfigs.h"
+#import "AdLimeSegment.h"
 
 /*!
 Class contains logic that applies to the SDK as a whole.
@@ -24,12 +25,17 @@ Class contains logic that applies to the SDK as a whole.
  */
 + (void)setGdprConsent:(BOOL) consent;
 
-
 /*!
  @brief Indicates whether user consent GDPR.
  @result BOOL
  */
 + (BOOL)isGdprConsent;
+
+/*!
+ @brief Set whether to print log on Xcode console output.
+ @param enable YES if print log, NO otherwise
+ */
++ (void)setLogEnable:(BOOL)enable;
 
 /*!
 @brief Set whether to request test ads from SDK.
@@ -39,10 +45,10 @@ Class contains logic that applies to the SDK as a whole.
 + (void)setTestMode:(BOOL)testMode;
 
 /*!
- @brief Set whether to print log on Xcode console output.
- @param enable YES if print log, NO otherwise
- */
-+ (void)setLogEnable:(BOOL)enable;
+@brief set test server url  (just for specified developer)
+@param url server url.
+*/
++ (void)setTestServer:(NSString *)url;
 
 /*!
  @brief Set global NetworkConfigs, the config will be sent to Network SDK.
@@ -58,11 +64,10 @@ Class contains logic that applies to the SDK as a whole.
  */
 + (AdLimeNetworkConfigs *)getGlobalNetworkConfigs;
 
-
 /*!
-@brief set test server url  (just for specified developer)
-@param url server url.
+@brief set APP Segment
+@param segment AdLimeSegment include channel and customize value.
 */
-+ (void)setTestServer:(NSString *)url;
++ (void)setSegment:(AdLimeSegment *)segment;
 
 @end

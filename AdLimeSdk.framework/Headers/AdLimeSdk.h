@@ -63,3 +63,5 @@ FOUNDATION_EXPORT const unsigned char AdLimeSdkVersionString[];
 #import <AdLimeSdk/AdLimeTracker.h>
 #import <AdLimeSdk/AdLimeTrackerInfo.h>
 #import <AdLimeSdk/AdLimeTrackerDelegate.h>
+
+#import <AdLimeSdk/AdLimeAdLoader.h>

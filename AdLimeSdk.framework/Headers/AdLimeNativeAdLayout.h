@@ -48,7 +48,7 @@ typedef void (^ratingCallback)(double rating);
 
 /*!
 @property callToActionView
-@abstract view for rendering callToAction in native ad,  it can be Label or Button
+@abstract view for rendering callToAction in native ad, it can be UILabel or UIButton
 */
 @property UIView *callToActionView;
 

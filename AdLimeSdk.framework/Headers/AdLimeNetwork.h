@@ -48,6 +48,7 @@ typedef NS_ENUM(NSInteger, AdLimeNetworkId) {
     FIVE = 36,
     KUAISHOU = 37,
     IMOBILE = 38,
+    PANGLE = 39
 };
 
 /*!

@@ -65,9 +65,14 @@ Class contains logic that applies to the SDK as a whole.
 + (AdLimeNetworkConfigs *)getGlobalNetworkConfigs;
 
 /*!
-@brief set APP Segment
+@brief Set APP Segment
 @param segment AdLimeSegment include channel and customize value.
 */
 + (void)setSegment:(AdLimeSegment *)segment;
 
+/*!
+@brief Get SDK Version.
+@result version code
+*/
++ (int)getSdkVersion;
 @end

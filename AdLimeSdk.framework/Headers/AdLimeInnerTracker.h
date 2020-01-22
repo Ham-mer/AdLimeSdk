@@ -18,17 +18,21 @@ Track loading ad process of every LineItem.
 
 + (AdLimeInnerTracker *)getInstance;
 
-- (void)trackAdRequest:(AdLimeILineItem *)lineItem;
-- (void)trackAdLoaded:(AdLimeILineItem *)lineItem;
+- (void)trackAdRequest:(AdLimeILineItem *)lineItem lineItemRequestId:(NSString *)lineItemRequestId;
+- (void)trackAdLoaded:(AdLimeILineItem *)lineItem lineItemRequestId:(NSString *)lineItemRequestId;
+
+- (void)trackAdCallShow:(AdLimeILineItem *)lineItem lineItemRequestId:(NSString *)lineItemRequestId adContentInfo:(AdLimeAdContentInfo *)adContentInfo;
+// 为了兼容 Mediation_GDT 旧版本的 Splash，需要保留此方法
 - (void)trackAdCallShow:(AdLimeILineItem *)lineItem adContentInfo:(AdLimeAdContentInfo *)adContentInfo;
-- (void)trackAdShown:(AdLimeILineItem *)lineItem;
-- (void)trackAdClicked:(AdLimeILineItem *)lineItem adContentInfo:(AdLimeAdContentInfo *)adContentInfo;
-- (void)trackAdClosed:(AdLimeILineItem *)lineItem;
-- (void)trackAdFailedToLoad:(AdLimeILineItem *)lineItem adError:(AdLimeAdError *)adError;
-- (void)trackVideoStarted:(AdLimeILineItem *)lineItem;
-- (void)trackVideoCompleted:(AdLimeILineItem *)lineItem;
-- (void)trackRewarded:(AdLimeILineItem *)lineItem;
-- (void)trackRewardFailed:(AdLimeILineItem *)lineItem;
+
+- (void)trackAdShown:(AdLimeILineItem *)lineItem lineItemRequestId:(NSString *)lineItemRequestId;
+- (void)trackAdClicked:(AdLimeILineItem *)lineItem lineItemRequestId:(NSString *)lineItemRequestId adContentInfo:(AdLimeAdContentInfo *)adContentInfo;
+- (void)trackAdClosed:(AdLimeILineItem *)lineItem lineItemRequestId:(NSString *)lineItemRequestId;
+- (void)trackAdFailedToLoad:(AdLimeILineItem *)lineItem lineItemRequestId:(NSString *)lineItemRequestId adError:(AdLimeAdError *)adError;
+- (void)trackVideoStarted:(AdLimeILineItem *)lineItem lineItemRequestId:(NSString *)lineItemRequestId;
+- (void)trackVideoCompleted:(AdLimeILineItem *)lineItem lineItemRequestId:(NSString *)lineItemRequestId;
+- (void)trackRewarded:(AdLimeILineItem *)lineItem lineItemRequestId:(NSString *)lineItemRequestId;
+- (void)trackRewardFailed:(AdLimeILineItem *)lineItem lineItemRequestId:(NSString *)lineItemRequestId;
 
 - (void)trackAdUnitRequest:(AdLimeAdUnit *)adUnit;
 - (void)trackAdUnitLoaded:(AdLimeAdUnit *)adUnit;

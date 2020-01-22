@@ -24,6 +24,16 @@ Info of LineItem when tracking loading ad process.
 @property NSString *adUnitName;
 
 /*!
+@brief Id of SDK platform LineItem.
+*/
+@property NSString *lineItemId;
+
+/*!
+@brief Id identiy one LineItem request process, from load, fill to imp and click. This id wil recreate when LineItem load every time.
+*/
+@property NSString *lineItemRequestId;
+
+/*!
  @brief AdType of LienItem. For example: Banner, Interstitial, Native and so on.
  */
 @property int adType;
@@ -46,8 +56,11 @@ Info of LineItem when tracking loading ad process.
 
 @property (nonatomic, strong) AdLimeAdContentInfo *adContentInfo;
 
-- (AdLimeTrackerInfo *)initWithLineItem:(AdLimeILineItem *)iLineItem;
+- (AdLimeTrackerInfo *)initWithLineItem:(AdLimeILineItem *)iLineItem 
+                    lineItemRequestId:(NSString *)lineItemRequestId;
 
-- (AdLimeTrackerInfo *)initWithLineItem:(AdLimeILineItem *)iLineItem adContentInfo: (AdLimeAdContentInfo *)contentInfo;
+- (AdLimeTrackerInfo *)initWithLineItem:(AdLimeILineItem *)iLineItem 
+                    lineItemRequestId:(NSString *)lineItemRequestId
+                        adContentInfo:(AdLimeAdContentInfo *)contentInfo;
 
 @end

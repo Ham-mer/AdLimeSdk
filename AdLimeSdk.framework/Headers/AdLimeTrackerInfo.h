@@ -6,7 +6,8 @@
 #import <Foundation/Foundation.h>
 #import "AdLimeILineItem.h"
 #import "AdLimeAdContentInfo.h"
-
+#import "AdLimeAdType.h"
+#import "AdLimeNetwork.h"
 
 /*!
 Info of LineItem when tracking loading ad process.
@@ -36,13 +37,13 @@ Info of LineItem when tracking loading ad process.
 /*!
  @brief AdType of LienItem. For example: Banner, Interstitial, Native and so on.
  */
-@property int adType;
+@property AdLimeAdTypeId adType;
 
 /*!
  @brief Id of Network the LineItem belonged.
  @see AdLimeNetworkId
  */
-@property int networkId;
+@property AdLimeNetworkId networkId;
 
 /*!
  @brief AdUnitId of LineItem. For example: AdMob AdUnit ID, Facebook Placement ID and so on.

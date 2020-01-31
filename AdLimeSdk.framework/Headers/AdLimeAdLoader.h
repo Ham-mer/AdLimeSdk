@@ -46,12 +46,12 @@ Class contains API for adLoader
 * NativeAd
 */
 + (void)loadNativeAd:(NSString *)adUnitId;
++ (void)showNativeAd:(NSString *)adUnitId container:(UIView *)container nativeAdLayout:(AdLimeNativeAdLayout *)layout;
+
 + (void)loadNativeAd:(NSString *)adUnitId nativeAdLayout:(AdLimeNativeAdLayout *)layout;
++ (void)showNativeAd:(NSString *)adUnitId container:(UIView *)container;
 
 + (BOOL)isNativeAdReady:(NSString *)adUnitId;
-
-+ (void)showNativeAd:(NSString *)adUnitId container:(UIView *)container;
-+ (void)showNativeAd:(NSString *)adUnitId container:(UIView *)container nativeAdLayout:(AdLimeNativeAdLayout *)layout;
 
 /**
 * InterstitialAd.
@@ -85,19 +85,23 @@ Class contains API for adLoader
 * MixViewAd.
 */
 + (void)loadMixViewAd:(NSString *)adUnitId rootViewController:(UIViewController *)viewController;
++ (void)showMixViewAd:(NSString *)adUnitId container:(UIView *)container nativeAdLayout:(AdLimeNativeAdLayout *)layout;
+
 + (void)loadMixViewAd:(NSString *)adUnitId rootViewController:(UIViewController *)viewController nativeAdLayout:(AdLimeNativeAdLayout *)layout;
++ (void)showMixViewAd:(NSString *)adUnitId container:(UIView *)container;
 
 + (BOOL)isMixViewAdReady:(NSString *)adUnitId;
-
-+ (void)showMixViewAd:(NSString *)adUnitId container:(UIView *)container;
-+ (void)showMixViewAd:(NSString *)adUnitId container:(UIView *)container nativeAdLayout:(AdLimeNativeAdLayout *)layout;
 
 /**
 * MixFullScreenAd.
 */
++ (void)loadMixFullScreenAd:(NSString *)adUnitId;
++ (void)showMixFullScreenAd:(NSString *)adUnitId viewController:(UIViewController *)viewController nativeAdLayout:(AdLimeNativeAdLayout *)layout;
+
 + (void)loadMixFullScreenAd:(NSString *)adUnitId nativeAdLayout:(AdLimeNativeAdLayout *)layout;
-+ (BOOL)isMixFullScreenAdReady:(NSString *)adUnitId;
 + (void)showMixFullScreenAd:(NSString *)adUnitId viewController:(UIViewController *)viewController;
+
++ (BOOL)isMixFullScreenAdReady:(NSString *)adUnitId;
 
 @end
 

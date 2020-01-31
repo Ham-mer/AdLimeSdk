@@ -40,7 +40,7 @@ NS_ASSUME_NONNULL_BEGIN
 /*!
 @method setNativeAdLayout
 @abstract set native ad layout to native
-@param layout AdLimeMixViewAdLayout
+@param layout AdLimeNativeAdLayout
 */
 - (void)setNativeAdLayout:(AdLimeNativeAdLayout *)layout;
 
@@ -90,6 +90,15 @@ NS_ASSUME_NONNULL_BEGIN
 @param viewController Set rootViewController to the current view controller at the time this method is called. If your application does not use view controllers pass in nil and your views will be removed from the window to show the mixFullScreen and restored when done. After the mixFullScreen has been removed, the delegate's mixFullScreenDidDismissScreen: will be called.
 */
 - (void)showFromViewController:(nullable UIViewController *)viewController;
+
+/*!
+@method showFromViewController
+@abstract Presents the mixFullScreen ad which takes over the entire screen until the user dismisses it
+@param viewController Set rootViewController to the current view controller at the time this method is called. If your application does not use view controllers pass in nil and your views will be removed from the window to show the mixFullScreen and restored when done. After the mixFullScreen has been removed, the delegate's mixFullScreenDidDismissScreen: will be called.
+@param nativeAdLayout AdLimeNativeAdLayout
+*/
+- (void)showFromViewController:(nullable UIViewController *)viewController nativeAdLayout:(AdLimeNativeAdLayout *)layout;
+
 
 // Unity Start
 - (id)initWithMixFullScreenClientReference:(AdLimeTypeMixFullScreenClientRef _Nullable* _Nullable)mixFullScreenClient adUnitId:(NSString *)adUnitId;

@@ -27,9 +27,8 @@ Class contains Segment parameter that applies to the SDK when request adunit.
 */
 @property(nonatomic, strong) NSDictionary *customize;
 
-
-- (NSString *)getCustomizeDesc;
-- (NSString *)getChannelDesc;
+- (NSString *)getURLEncodedCustomize;
+- (NSString *)getURLEncodedChannel;
 
 @end
 

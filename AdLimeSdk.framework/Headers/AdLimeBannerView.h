@@ -51,17 +51,21 @@ NS_ASSUME_NONNULL_BEGIN
 @param configs AdLimeNetworkConfigs
 */
 - (void)setNetworkConfigs:(AdLimeNetworkConfigs *)configs;
-/*!
-@method setHE
-@abstract set hight ecpm mode
-*/
-- (void)setHE;
+
 /*!
 @method isReady
 @abstract Returns YES if the bannerView is ready to be displayed. The delegate's  bannerViewDidReceiveAd: will be called after this property switches from NO to YES.
 @result YES: banner is ready, NO: no ad ready
 */
 - (BOOL)isReady;
+
+/*!
+@method getReadyLineItem
+@abstract Return loaded LineItem of max priority and eCPM.
+@result AdLimeILineItem
+*/
+- (AdLimeILineItem *)getReadyLineItem;
+
 /*!
 @method destroy
 @abstract destory the banner Ad

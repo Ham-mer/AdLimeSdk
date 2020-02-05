@@ -62,6 +62,13 @@ NS_ASSUME_NONNULL_BEGIN
 -(BOOL)isReady;
 
 /*!
+@method getReadyLineItem
+@abstract Return loaded LineItem of max priority and eCPM.
+@result AdLimeILineItem
+*/
+- (AdLimeILineItem *)getReadyLineItem;
+
+/*!
 @method destroy
 @abstract destory the ad request.
 */

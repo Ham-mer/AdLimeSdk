@@ -12,6 +12,7 @@
 #import "AdLimeNativeAdLayout.h"
 #import "AdLimeTypes.h"
 #import "AdLimeBannerAdPosition.h"
+#import "AdLimeILineItem.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -75,6 +76,13 @@ NS_ASSUME_NONNULL_BEGIN
 @result YES: ad is ready, NO: no ad ready
 */
 - (BOOL)isReady;
+
+/*!
+@method getReadyLineItem
+@abstract Return loaded LineItem of max priority and eCPM.
+@result AdLimeILineItem
+*/
+- (AdLimeILineItem *)getReadyLineItem;
 
 /*!
 @method getAdView

@@ -6,6 +6,7 @@
 #import "AdLimeNativeAdLayout.h"
 #import "AdLimeInnerMixFullScreenAdDelegate.h"
 #import "AdLimeCLConfig.h"
+#import "AdLimeILineItem.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -79,6 +80,13 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)isReady;
 
 /*!
+@method getReadyLineItem
+@abstract Return loaded LineItem of max priority and eCPM.
+@result AdLimeILineItem
+*/
+- (AdLimeILineItem *)getReadyLineItem;
+
+/*!
 @method destroy
 @abstract destory the ad request.
 */
@@ -95,7 +103,7 @@ NS_ASSUME_NONNULL_BEGIN
 @method showFromViewController
 @abstract Presents the mixFullScreen ad which takes over the entire screen until the user dismisses it
 @param viewController Set rootViewController to the current view controller at the time this method is called. If your application does not use view controllers pass in nil and your views will be removed from the window to show the mixFullScreen and restored when done. After the mixFullScreen has been removed, the delegate's mixFullScreenDidDismissScreen: will be called.
-@param nativeAdLayout AdLimeNativeAdLayout
+@param layout AdLimeNativeAdLayout
 */
 - (void)showFromViewController:(nullable UIViewController *)viewController nativeAdLayout:(AdLimeNativeAdLayout *)layout;
 

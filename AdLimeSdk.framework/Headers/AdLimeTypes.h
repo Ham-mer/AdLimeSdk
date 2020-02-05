@@ -73,13 +73,17 @@ typedef void (*AdLimeMixFullScreenAdDidDismissScreenCallback)(AdLimeTypeMixFullS
 typedef void (*AdLimeMixFullScreenAdWillLeaveApplicationCallback)(AdLimeTypeMixFullScreenClientRef *mixFullScreenClient);
 
 
+/// LineItem
+typedef const void *AdLimeTypeLineItemRef;
+/// AdUnit
+typedef const void *AdLimeTypeAdUnitRef;
+
+
 /// NativeAdLayout
-// 对 Unity 中 NativeAdLayout 的引用。
 typedef const void *AdLimeTypeNativeAdLayoutRef;
 
 
 /// CLConfig
-// 对 Unity 中 CLConfig 的引用。
 typedef const void *AdLimeTypeCLConfigRef;
 
 

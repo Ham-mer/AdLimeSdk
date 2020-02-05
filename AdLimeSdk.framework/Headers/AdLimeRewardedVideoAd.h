@@ -9,6 +9,7 @@
 #import "AdLimeInnerRewardedVideoAdDelegate.h"
 #import "AdLimeNetworkConfigs.h"
 #import "AdLimeCLConfig.h"
+#import "AdLimeILineItem.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -63,12 +64,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)setNetworkConfigs:(AdLimeNetworkConfigs *)configs;
 
 /*!
-@method setHE
-@abstract set hight ecpm mode
-*/
-- (void)setHE;
-
-/*!
 @method setCL
 @abstract set cycle load model
 @param cacheCount NSInteger cached ad count
@@ -94,6 +89,13 @@ NS_ASSUME_NONNULL_BEGIN
 @result YES: ad is ready, NO: no ad ready
 */
 - (BOOL)isReady;
+
+/*!
+@method getReadyLineItem
+@abstract Return loaded LineItem of max priority and eCPM.
+@result AdLimeILineItem
+*/
+- (AdLimeILineItem *)getReadyLineItem;
 
 /*!
 @method destroy

@@ -6,6 +6,7 @@
 #import <Foundation/Foundation.h>
 #import "AdLimeBannerAdSize.h"
 #import "AdLimeNetwork.h"
+#import "AdLimeIAdUnit.h"
 
 @interface AdLimeILineItem : NSObject
 
@@ -26,5 +27,8 @@
 -(int)getRequestTimeOut;
 
 -(NSDictionary *)getServerExtras;
+
+// Belonged AdUnit
+-(AdLimeIAdUnit *)getAdUnit;
 
 @end

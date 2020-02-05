@@ -12,6 +12,7 @@
 #import "AdLimeNativeAdLayout.h"
 #import "AdLimeFeed.h"
 #import "AdLimeNetworkConfigs.h"
+#import "AdLimeILineItem.h"
 
 NS_ASSUME_NONNULL_BEGIN
 /*!
@@ -55,12 +56,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)setNetworkConfigs:(AdLimeNetworkConfigs *)configs;
 
 /*!
-@method setHE
-@abstract set hight ecpm mode
-*/
-- (void)setHE;
-
-/*!
 @method loadAd
 @abstract Makes an feedlist ad request.
 */
@@ -73,6 +68,12 @@ NS_ASSUME_NONNULL_BEGIN
 */
 - (BOOL)isReady;
 
+/*!
+@method getReadyLineItem
+@abstract Return loaded LineItem of max priority and eCPM.
+@result AdLimeILineItem
+*/
+- (AdLimeILineItem *)getReadyLineItem;
 
 /*!
 @method getFeedArray

@@ -3,6 +3,12 @@
 #import "AdLimeSegment.h"
 #import "AdLimeNetwork.h"
 
+typedef NS_ENUM(NSInteger, AdLimeGdprConsentStatus) {
+    ADLIME_GDPR_CONSENT_NO = -1, // gdpr set to no
+    ADLIME_GDPR_CONSENT_UNKNOWN = 0, // not set gdpr
+    ADLIME_GDPR_CONSENT_YES = 1  // gdpr set to yes
+};
+
 /*!
 Class contains logic that applies to the SDK as a whole.
 */
@@ -26,13 +32,15 @@ Class contains logic that applies to the SDK as a whole.
  @brief Set whether user consent GDPR. You can setGdprConsent at anytime if user changed their choices.
  @param consent YES if user consent, NO otherwise
  */
-+ (void)setGdprConsent:(BOOL) consent;
++ (void)setGdprConsent:(BOOL)consent;
 
 /*!
  @brief Indicates whether user consent GDPR.
  @result BOOL
  */
 + (BOOL)isGdprConsent;
+
++ (AdLimeGdprConsentStatus)getGDPRConsentStatus;
 
 /*!
  @brief Set whether to print log on Xcode console output.
@@ -47,7 +55,7 @@ Class contains logic that applies to the SDK as a whole.
 + (BOOL)isLogEnable;
 
 /*!
-@brief Set whether to request test ads from SDK.
+@brief Set whether to request test ads from Marketplace.
 @warning Test mode will not effect Network ad requesting.
 @param testMode YES if request test ads, NO otherwise
 */
@@ -78,7 +86,7 @@ Class contains logic that applies to the SDK as a whole.
 + (void)setNetworkDebugMode:(BOOL)debugMode;
 
 /**
-@brief Set specified Network debug mode switch. This setting will override setting in setNetworkDebugMode for this Network.
+@brief Set specified Network debug mode switch. This setting will override setting in setNetworkDebugMode() for this Network.
 @param network Network
 @param debugMode YES if debug mode, NO otherwise
  */
@@ -97,7 +105,7 @@ Class contains logic that applies to the SDK as a whole.
 + (void)setNetworkTestMode:(BOOL)testMode;
 
 /**
-@brief Set specified Network test mode switch. This setting will override setting in setNetworkTestMode for this Network.
+@brief Set specified Network test mode switch. This setting will override setting in setNetworkTestMode() for this Network.
 @param testMode YES if test mode, NO otherwise
  */
 + (void)setNetwork:(AdLimeNetworkId)network testMode:(BOOL)testMode;
@@ -123,7 +131,7 @@ Class contains logic that applies to the SDK as a whole.
 + (AdLimeNetworkConfigs *)getGlobalNetworkConfigs;
 
 /*!
-@brief Set Segment
+@brief Set user segment, SDK will request AdUnit Config using this segment.
 @param segment AdLimeSegment include channel and customize value.
 */
 + (void)setSegment:(AdLimeSegment *)segment;

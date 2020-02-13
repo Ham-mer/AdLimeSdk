@@ -60,6 +60,13 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)isReady;
 
 /*!
+@method showAdView
+@abstract showAdView in center of container
+@param container the container to show AdLimeBannerView
+*/
+- (void)showAdView:(UIView *)container;
+
+/*!
 @method getReadyLineItem
 @abstract Return loaded LineItem of max priority and eCPM.
 @result AdLimeILineItem

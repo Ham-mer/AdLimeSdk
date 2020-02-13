@@ -86,7 +86,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /*!
 @method getAdView
-@abstract get native ad View for display, layout has be set native before
+@abstract get native ad View for display, AdLimeNativeAdLayout has be set native before
 */
 - (UIView *)getAdView;
 
@@ -95,8 +95,22 @@ NS_ASSUME_NONNULL_BEGIN
 @abstract get native ad View for display
 @param layout AdLimeMixViewAdLayout
 */
-
 - (UIView *)getAdView:(AdLimeNativeAdLayout *)layout;
+
+/*!
+@method showAdView, AdLimeNativeAdLayout has be set native before
+@abstract showAdView in center of container
+@param container the container to show AdView
+*/
+- (void)showAdView:(UIView *)container;
+
+/*!
+@method showAdView
+@abstract showAdView in center of container
+@param container the container to show AdView
+ @param layout AdLimeMixViewAdLayout for render NativeAd
+*/
+- (void)showAdView:(UIView *)container nativeAdLayout:(AdLimeNativeAdLayout *)layout;
 
 /*!
 @method destroy

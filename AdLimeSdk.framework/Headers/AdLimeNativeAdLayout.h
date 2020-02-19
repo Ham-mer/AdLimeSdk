@@ -350,6 +350,8 @@ typedef void (^ratingCallback)(double rating);
 
 -(BOOL)hasInteractiveArea;
 
+@property (nonatomic, strong) UIView *defaultBaseLayout;
+
 +(AdLimeNativeAdLayout *)fromUnityLayout:(NSString *)layoutName;
 
 /*!

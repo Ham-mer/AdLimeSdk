@@ -22,7 +22,7 @@ typedef NS_ENUM(NSInteger, AdLimeNetworkId) {
     ADLIME_NETWORK_FYBER = 10,
     ADLIME_NETWORK_INMOBI = 11,
     ADLIME_NETWORK_VUNGLE = 12,
-    ADLIME_NETWORK_DFP = 13,
+    ADLIME_NETWORK_GOOGLE_AD_MANAGER = 13,
     ADLIME_NETWORK_CREATIVE = 14,
     ADLIME_NETWORK_DAP = 15,
     ADLIME_NETWORK_BAIDU = 16,
@@ -48,7 +48,8 @@ typedef NS_ENUM(NSInteger, AdLimeNetworkId) {
     ADLIME_NETWORK_FIVE = 36,
     ADLIME_NETWORK_KUAISHOU = 37,
     ADLIME_NETWORK_IMOBILE = 38,
-    ADLIME_NETWORK_PANGLE = 39
+    ADLIME_NETWORK_PANGLE = 39,
+    ADLIME_NETWORK_SIGMOB = 40,
 };
 
 /*!
@@ -60,14 +61,14 @@ typedef NS_ENUM(NSInteger, AdLimeNetworkId) {
  @brief Id of Network.
  @see AdLimeNetworkId
  */
-@property int mid;
+@property AdLimeNetworkId mid;
 
 /*!
  @brief Name of Network.
  */
 @property NSString *name;
 
-+(AdLimeNetwork *)fromId: (int) networkId;
-+(NSString *)getName: (int)networkId;
++(AdLimeNetwork *)fromId:(int)networkId;
++(NSString *)getName:(AdLimeNetworkId)networkId;
 
 @end

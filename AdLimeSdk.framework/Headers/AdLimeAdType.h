@@ -24,4 +24,6 @@ typedef NS_ENUM(NSInteger, AdLimeAdTypeId) {
 - (id)initWithType:(int)type;
 - (NSString *)getName;
 
+- (BOOL)canIncludeBanner;
+
 @end

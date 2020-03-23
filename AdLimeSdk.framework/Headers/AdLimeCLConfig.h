@@ -10,6 +10,11 @@
 
 @interface AdLimeCLConfig : NSObject
 
+@property BOOL isEnable;
+
+- (void)setCacheCount:(int)cacheCount;
+- (int)getCacheCount;
+
 - (void)setMinErrorTime:(int)time;
 - (int)getMinErrorTime;
 
@@ -25,7 +30,6 @@
 - (void)setDelayFactor:(float)factor;
 - (float)getDelayFactor;
 
-- (void)setCacheCount:(int)cacheCount;
-- (int)getCacheCount;
++ (AdLimeCLConfig *)fromJson:(NSDictionary *)jsonObject;
 
 @end

@@ -23,4 +23,3 @@ typedef NS_ENUM(NSInteger, AdLimeBannerAdSize) {
     AdLimeBannerAdSize_728_90 = 11,
     AdLimeBannerAdSize_Smart = 71
 };
-

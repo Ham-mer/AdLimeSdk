@@ -1,4 +1,6 @@
 #import "AdLimeNetwork.h"
+#import "AdLimeIAdUnit.h"
+#import "AdLimeILineItem.h"
 
 /*!
 @enum AdLimeAdErrorCode
@@ -37,15 +39,17 @@ typedef NS_ENUM(NSUInteger, AdLimeAdErrorCode) {
 @result Error Code
 */
 -(AdLimeAdErrorCode)getCode;
--(AdLimeAdError *)appendErrorCode:(int)errorCode;
--(AdLimeAdError *)appendErrorMessage:(NSString *)message;
--(AdLimeAdError *)appendErrorCode:(int)errorCode withMessage:(NSString *)message;
+-(NSString *)getMessage;
 
 -(AdLimeAdError *)innerMessage:(NSString *)message;
--(AdLimeAdError *)innerNetwork:(AdLimeNetwork *)network;
--(AdLimeAdError *)innerAdUnitName:(NSString *)adUnitName;
--(AdLimeAdError *)innerAdUnitId:(NSString *)adUnitId;
--(AdLimeAdError *)innerLineItemParams:(NSString *)lineItemParams;
+-(AdLimeAdError *)setIsAdUnitLevelError:(BOOL)isAdUnitLevelError adUnit:(AdLimeIAdUnit*)adUnit;
+-(AdLimeAdError *)setAdUnitFailedSpentTime:(long)time;
+-(AdLimeAdError *)appendErrorCode:(AdLimeAdErrorCode)errorCode;
+-(AdLimeAdError *)appendErrorMessage:(NSString *)message;
+-(AdLimeAdError *)appendErrorCode:(AdLimeAdErrorCode)errorCode withMessage:(NSString *)message;
+-(AdLimeAdError *)setLineItemFailedSpentTime:(long)time;
+-(AdLimeAdError *)setLineItem:(AdLimeILineItem *)lineItem;
+-(AdLimeAdError *)setLineItemErrorList:(NSMutableArray<AdLimeAdError *> *)adErrorArray;
 
 -(NSString *)getEventResultValue;
 

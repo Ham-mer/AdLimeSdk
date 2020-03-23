@@ -5,6 +5,7 @@
 #import "AdLimeBannerAdPosition.h"
 #import "AdLimeILineItem.h"
 #import "AdLimeNetworkConfigs.h"
+#import "AdLimeBannerAdSize.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -44,6 +45,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) AdLimeBannerAdDidDismissScreenCallback didDismissCallback;
 @property(nonatomic, assign) AdLimeBannerAdWillLeaveApplicationCallback willLeaveCallback;
 // Unity End
+
+/*!
+@method setAdSize
+@abstract Set adSize of Banner. (Optional). Use the adSize on web config priority. You can set different sizes according to the phone size. (Phone, tablet)
+@param configs AdLimeNetworkConfigs
+*/
+- (void)setAdSize:(AdLimeBannerAdSize)adSize;
 
 /*!
 @method setNetworkConfigs

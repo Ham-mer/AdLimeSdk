@@ -142,6 +142,8 @@ Class contains logic that applies to the SDK as a whole.
 */
 + (AdLimeSegment *)getSegment;
 
++ (NSString *)getUid;
+
 /*!
 @brief Get SDK Version.
 @result version code

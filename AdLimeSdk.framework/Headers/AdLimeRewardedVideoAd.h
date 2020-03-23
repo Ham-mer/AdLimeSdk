@@ -98,6 +98,13 @@ NS_ASSUME_NONNULL_BEGIN
 - (AdLimeILineItem *)getReadyLineItem;
 
 /*!
+@method getReadyLineItem
+@abstract Get RewardItem of loaded ad, you can notify user about reward info in dialog before show ad.
+@result AdLimeRewardItem
+*/
+- (AdLimeRewardItem *)getRewardItem;
+
+/*!
 @method destroy
 @abstract destory the ad request.
 */

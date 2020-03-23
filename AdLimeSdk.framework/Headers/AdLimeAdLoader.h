@@ -46,9 +46,9 @@ Class contains API for adLoader
 * NativeAd
 */
 + (void)loadNativeAd:(NSString *)adUnitId;
-+ (void)showNativeAd:(NSString *)adUnitId container:(UIView *)container nativeAdLayout:(AdLimeNativeAdLayout *)layout;
++ (void)showNativeAd:(NSString *)adUnitId container:(UIView *)container nativeAdLayout:(AdLimeNativeAdLayout * _Nullable)layout;
 
-+ (void)loadNativeAd:(NSString *)adUnitId nativeAdLayout:(AdLimeNativeAdLayout *)layout;
++ (void)loadNativeAd:(NSString *)adUnitId nativeAdLayout:(AdLimeNativeAdLayout * _Nullable)layout;
 + (void)showNativeAd:(NSString *)adUnitId container:(UIView *)container;
 
 + (BOOL)isNativeAdReady:(NSString *)adUnitId;
@@ -85,9 +85,9 @@ Class contains API for adLoader
 * MixViewAd.
 */
 + (void)loadMixViewAd:(NSString *)adUnitId rootViewController:(UIViewController *)viewController;
-+ (void)showMixViewAd:(NSString *)adUnitId container:(UIView *)container nativeAdLayout:(AdLimeNativeAdLayout *)layout;
++ (void)showMixViewAd:(NSString *)adUnitId container:(UIView *)container nativeAdLayout:(AdLimeNativeAdLayout * _Nullable)layout;
 
-+ (void)loadMixViewAd:(NSString *)adUnitId rootViewController:(UIViewController *)viewController nativeAdLayout:(AdLimeNativeAdLayout *)layout;
++ (void)loadMixViewAd:(NSString *)adUnitId rootViewController:(UIViewController *)viewController nativeAdLayout:(AdLimeNativeAdLayout * _Nullable)layout;
 + (void)showMixViewAd:(NSString *)adUnitId container:(UIView *)container;
 
 + (BOOL)isMixViewAdReady:(NSString *)adUnitId;
@@ -96,9 +96,9 @@ Class contains API for adLoader
 * MixFullScreenAd.
 */
 + (void)loadMixFullScreenAd:(NSString *)adUnitId;
-+ (void)showMixFullScreenAd:(NSString *)adUnitId viewController:(UIViewController *)viewController nativeAdLayout:(AdLimeNativeAdLayout *)layout;
++ (void)showMixFullScreenAd:(NSString *)adUnitId viewController:(UIViewController *)viewController nativeAdLayout:(AdLimeNativeAdLayout * _Nullable)layout;
 
-+ (void)loadMixFullScreenAd:(NSString *)adUnitId nativeAdLayout:(AdLimeNativeAdLayout *)layout;
++ (void)loadMixFullScreenAd:(NSString *)adUnitId nativeAdLayout:(AdLimeNativeAdLayout * _Nullable)layout;
 + (void)showMixFullScreenAd:(NSString *)adUnitId viewController:(UIViewController *)viewController;
 
 + (BOOL)isMixFullScreenAdReady:(NSString *)adUnitId;

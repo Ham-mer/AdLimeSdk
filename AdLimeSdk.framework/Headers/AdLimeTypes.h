@@ -48,6 +48,9 @@ typedef void (*AdLimeRewardVideoDidCompleteCallback)(AdLimeTypeRewardedVideoClie
 typedef void (*AdLimeRewardVideoDidRewardCallback)(AdLimeTypeRewardedVideoClientRef *rewardedVideoClient, char *rewardType, int rewardAmount);
 typedef void (*AdLimeRewardVideoDidFailedToRewardCallback)(AdLimeTypeRewardedVideoClientRef *rewardedVideoClient);
 
+/// RewardItem
+typedef const void *AdLimeTypeRewardItemRef;
+
 
 /// MixViewAd
 // 对 Unity 中 MixViewAd 和 MixViewClient 的引用。

@@ -51,6 +51,13 @@ NS_ASSUME_NONNULL_BEGIN
 // Unity End
 
 /*!
+@method setAdSize
+@abstract Set adSize of Banner in MixView. (Optional). Use the adSize on web config priority. You can set different sizes according to the phone size. (Phone, tablet)
+@param adSize AdLimeBannerAdSize
+*/
+- (void)setAdSize:(AdLimeBannerAdSize)adSize;
+
+/*!
 @method setNativeAdLayout
 @abstract set native ad layout to native
 @param layout AdLimeMixViewAdLayout

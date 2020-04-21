@@ -49,6 +49,20 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)setCount:(int)count;
 
 /*!
+@method setExpressAdSize
+@abstract Set adSize of express ad.
+@param adSize AdLimeBannerAdSize
+*/
+- (void)setExpressAdSize:(CGSize)adSize;
+
+/*!
+@method setMuted
+@abstract Set whether video play muted, mute by default.
+@param muted true-play video muted; false-play video sound
+*/
+- (void)setMuted:(BOOL)muted;
+
+/*!
 @method setNetworkConfigs
 @abstract set network configs
 @param configs AdLimeNetworkConfigs

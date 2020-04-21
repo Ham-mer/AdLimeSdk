@@ -39,11 +39,25 @@ NS_ASSUME_NONNULL_BEGIN
 /// iOS End
 
 /*!
-@method setAdSize
+@method setBannerAdSize
 @abstract Set adSize of Banner in MixFullScreenAd. (Optional). Use the adSize on web config priority. You can set different sizes according to the phone size. (Phone, tablet)
 @param adSize AdLimeBannerAdSize
 */
-- (void)setAdSize:(AdLimeBannerAdSize)adSize;
+- (void)setBannerAdSize:(AdLimeBannerAdSize)adSize;
+
+/*!
+@method setExpressAdSize
+@abstract Set adSize of express ad.
+@param adSize AdLimeBannerAdSize
+*/
+- (void)setExpressAdSize:(CGSize)adSize;
+
+/*!
+@method setMuted
+@abstract Set whether video play muted, mute by default.
+@param muted true-play video muted; false-play video sound
+*/
+- (void)setMuted:(BOOL)muted;
 
 /*!
 @method setNativeAdLayout

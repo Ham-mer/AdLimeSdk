@@ -8,7 +8,7 @@
 #import <CoreGraphics/CoreGraphics.h>
 #import <UIKit/UIKit.h>
 #import "AdLimeTypes.h"
-#import "AdLimeBannerAdPosition.h"
+#import "AdLimeUnityAdPos.h"
 
 @interface AdLimePluginUtil : NSObject
 
@@ -25,14 +25,14 @@
 + (UIViewController *)iOSViewController;
 
 /// 将 view 放在 parentView 的 position 位置。
-/// AdLimeBannerAdPosition.
-+ (void)positionView:(UIView *)view inParentView:(UIView *)parentView adPosition:(AdLimeBannerAdPosition)position;
+/// AdLimeUnityAdPosition.
++ (void)positionView:(UIView *)view inParentView:(UIView *)parentView adPosition:(AdLimeUnityAdPosition)position;
 
 /// 将 view 放在 parentView 的 (x, y) 位置。
 + (void)positionView:(UIView *)view inParentView:(UIView *)parentView withX:(int)x andY:(int)y;
 
 /// 将 view 放在 parentView 的 position 位置，向左偏移 x，想下偏移 y
-+ (void)positionView:(UIView *)view inParentView:(UIView *)parentView adPosition:(AdLimeBannerAdPosition)position x:(int)x y:(int)y;
++ (void)positionView:(UIView *)view inParentView:(UIView *)parentView adPosition:(AdLimeUnityAdPosition)position x:(int)x y:(int)y;
 
 /// Returns a GADAdSize for a specified width and height.
 //+ (GADAdSize)adSizeForWidth:(CGFloat)width height:(CGFloat)height;

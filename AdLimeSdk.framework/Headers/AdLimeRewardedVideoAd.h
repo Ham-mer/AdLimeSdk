@@ -57,6 +57,13 @@ NS_ASSUME_NONNULL_BEGIN
 /// Unity End
 
 /*!
+@method setMuted
+@abstract Set whether video play muted, mute by default.
+@param muted true-play video muted; false-play video sound
+*/
+- (void)setMuted:(BOOL)muted;
+
+/*!
 @method setNetworkConfigs
 @abstract set network configs
 @param configs AdLimeNetworkConfigs

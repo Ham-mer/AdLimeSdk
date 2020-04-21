@@ -11,7 +11,7 @@
 #import "AdLimeMixViewAdDelegate.h"
 #import "AdLimeNativeAdLayout.h"
 #import "AdLimeTypes.h"
-#import "AdLimeBannerAdPosition.h"
+#import "AdLimeUnityAdPos.h"
 #import "AdLimeILineItem.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -38,24 +38,26 @@ NS_ASSUME_NONNULL_BEGIN
 */
 @property(nonatomic, weak, nullable) id<AdLimeMixViewAdDelegate> delegate;
 
-// Unity Start
-- (id)initWithMixViewClientReference:(AdLimeTypeMixViewClientRef _Nullable* _Nullable)mixViewClient adUnitId:(NSString *)adUnitId rootViewController:(UIViewController *)viewController;
-// 引用 Unity 的 MixViewClient
-@property(nonatomic, assign) AdLimeTypeMixViewClientRef _Nullable* _Nullable mixViewClient;
-// 广告加载后，回调到 Unity 的接口
-@property(nonatomic, assign) AdLimeMixViewAdDidReceiveAdCallback adReceivedCallback;
-@property(nonatomic, assign) AdLimeMixViewAdDidFailToReceiveAdWithErrorCallback adFailedCallback;
-@property(nonatomic, assign) AdLimeMixViewAdWillPresentScreenCallback willPresentCallback;
-@property(nonatomic, assign) AdLimeMixViewAdDidDismissScreenCallback didDismissCallback;
-@property(nonatomic, assign) AdLimeMixViewAdWillLeaveApplicationCallback willLeaveCallback;
-// Unity End
-
 /*!
-@method setAdSize
+@method setBannerAdSize
 @abstract Set adSize of Banner in MixView. (Optional). Use the adSize on web config priority. You can set different sizes according to the phone size. (Phone, tablet)
 @param adSize AdLimeBannerAdSize
 */
-- (void)setAdSize:(AdLimeBannerAdSize)adSize;
+- (void)setBannerAdSize:(AdLimeBannerAdSize)adSize;
+
+/*!
+@method setExpressAdSize
+@abstract Set adSize of express ad.
+@param adSize AdLimeBannerAdSize
+*/
+- (void)setExpressAdSize:(CGSize)adSize;
+
+/*!
+@method setMuted
+@abstract Set whether video play muted, mute by default.
+@param muted true-play video muted; false-play video sound
+*/
+- (void)setMuted:(BOOL)muted;
 
 /*!
 @method setNativeAdLayout
@@ -126,20 +128,34 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)destroy;
 
 // Unity Start
+- (id)initWithMixViewClientReference:(AdLimeTypeMixViewClientRef _Nullable* _Nullable)mixViewClient adUnitId:(NSString *)adUnitId rootViewController:(UIViewController *)viewController;
+// 引用 Unity 的 MixViewClient
+@property(nonatomic, assign) AdLimeTypeMixViewClientRef _Nullable* _Nullable mixViewClient;
+// 广告加载后，回调到 Unity 的接口
+@property(nonatomic, assign) AdLimeMixViewAdDidReceiveAdCallback adReceivedCallback;
+@property(nonatomic, assign) AdLimeMixViewAdDidFailToReceiveAdWithErrorCallback adFailedCallback;
+@property(nonatomic, assign) AdLimeMixViewAdWillPresentScreenCallback willPresentCallback;
+@property(nonatomic, assign) AdLimeMixViewAdDidDismissScreenCallback didDismissCallback;
+@property(nonatomic, assign) AdLimeMixViewAdWillLeaveApplicationCallback willLeaveCallback;
+
+- (void)setUnityPosition:(AdLimeUnityAdPosition)position;
+- (void)setUnityPositionWithX:(int)x andY:(int)y;
+- (void)setUnityPositionRelative:(AdLimeUnityAdPosition)position withX:(int)x andY:(int)y;
+
 - (void)loadAdUnity;
 
-- (void)showUnity:(AdLimeBannerAdPosition)position;
-- (void)showUnityWithX:(int)x andY:(int)y;
-- (void)showUnityRelative:(AdLimeBannerAdPosition)position withX:(int)x andY:(int)y;
-
-- (void)setUnityPosition:(AdLimeBannerAdPosition)position;
-- (void)setUnityPositionWithX:(int)x andY:(int)y;
-- (void)setUnityPositionRelative:(AdLimeBannerAdPosition)position withX:(int)x andY:(int)y;
+- (void)showUnity;
 
 - (void)hideUnity;
 
 - (void)removeUnity;
 // Unity End
+
+// Need Delete
+- (void)showUnity:(AdLimeUnityAdPosition)position;
+- (void)showUnityWithX:(int)x andY:(int)y;
+- (void)showUnityRelative:(AdLimeUnityAdPosition)position withX:(int)x andY:(int)y;
+// Need Delete
 
 @end
 

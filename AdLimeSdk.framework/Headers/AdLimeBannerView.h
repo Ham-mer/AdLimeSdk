@@ -2,7 +2,7 @@
 #import <UIKit/UIKit.h>
 #import "AdLimeTypes.h"
 #import "AdLimeBannerViewDelegate.h"
-#import "AdLimeBannerAdPosition.h"
+#import "AdLimeUnityAdPos.h"
 #import "AdLimeILineItem.h"
 #import "AdLimeNetworkConfigs.h"
 #import "AdLimeBannerAdSize.h"
@@ -49,9 +49,23 @@ NS_ASSUME_NONNULL_BEGIN
 /*!
 @method setAdSize
 @abstract Set adSize of Banner. (Optional). Use the adSize on web config priority. You can set different sizes according to the phone size. (Phone, tablet)
-@param configs AdLimeNetworkConfigs
+@param adSize AdLimeBannerAdSize
 */
 - (void)setAdSize:(AdLimeBannerAdSize)adSize;
+
+/*!
+@method setExpressAdSize
+@abstract Set adSize of express ad.
+@param adSize AdLimeBannerAdSize
+*/
+- (void)setExpressAdSize:(CGSize)adSize;
+
+/*!
+@method setMuted
+@abstract Set whether video play muted, mute by default.
+@param muted true-play video muted; false-play video sound
+*/
+- (void)setMuted:(BOOL)muted;
 
 /*!
 @method setNetworkConfigs
@@ -96,20 +110,22 @@ NS_ASSUME_NONNULL_BEGIN
 // iOS End
 
 // Unity Start
-- (void)loadAdUnity;
-
-- (void)showUnity:(AdLimeBannerAdPosition)position;
-- (void)showUnityWithX:(int)x andY:(int)y;
-
-- (void)showUnity:(AdLimeBannerAdPosition)position inNetworks:(nonnull int[])networkIds DEPRECATED_MSG_ATTRIBUTE("");
-- (void)showUnityWithX:(int)x andY:(int)y inNetworks:(nonnull int[])networkIds DEPRECATED_MSG_ATTRIBUTE("");
-
-- (void)setUnityPosition:(AdLimeBannerAdPosition)position;
+- (void)setUnityPosition:(AdLimeUnityAdPosition)position;
 - (void)setUnityPositionWithX:(int)x andY:(int)y;
 
+- (void)loadAdUnity;
+- (void)showUnity;
 - (void)hideUnity;
 
 - (void)removeUnity;
+
+// Need Delete
+- (void)showUnity:(AdLimeUnityAdPosition)position;
+- (void)showUnityWithX:(int)x andY:(int)y;
+
+- (void)showUnity:(AdLimeUnityAdPosition)position inNetworks:(nonnull int[])networkIds DEPRECATED_MSG_ATTRIBUTE("");
+- (void)showUnityWithX:(int)x andY:(int)y inNetworks:(nonnull int[])networkIds DEPRECATED_MSG_ATTRIBUTE("");
+// Need Delete
 // Unity End
 
 @end

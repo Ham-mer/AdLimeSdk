@@ -16,7 +16,9 @@ typedef NS_ENUM(NSUInteger, AdLimeAdErrorCode) {
     ADLIME_ADERROR_INVALID_REQUEST = 1, // invalid request include adunit is invalid and Request too frequently etc.
     ADLIME_ADERROR_NETWORK_ERROR = 2, // network error
     ADLIME_ADERROR_NO_FILL = 3, // no fill
-    ADLIME_ADERROR_TIMEOUT = 4 // timeout
+    ADLIME_ADERROR_TIMEOUT = 4, // timeout
+    ADLIME_ADERROR_OVER_IMP_CAP = 5, // impression over cap
+    ADLIME_ADERROR_IN_IMP_PACE = 6 // in impression pace
 };
 
 /*!
@@ -30,6 +32,8 @@ typedef NS_ENUM(NSUInteger, AdLimeAdErrorCode) {
 +(AdLimeAdError *)NetworkError;
 +(AdLimeAdError *)NoFill;
 +(AdLimeAdError *)TimeOut;
++(AdLimeAdError *)OverImpCap;
++(AdLimeAdError *)InImpPace;
 
 -(BOOL)isNetworkError;
 

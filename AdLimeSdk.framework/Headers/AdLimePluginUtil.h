@@ -34,12 +34,4 @@
 /// 将 view 放在 parentView 的 position 位置，向左偏移 x，想下偏移 y
 + (void)positionView:(UIView *)view inParentView:(UIView *)parentView adPosition:(AdLimeUnityAdPosition)position x:(int)x y:(int)y;
 
-/// Returns a GADAdSize for a specified width and height.
-//+ (GADAdSize)adSizeForWidth:(CGFloat)width height:(CGFloat)height;
-
-/// If requesting smart banner landscape, returns the custom size for landscape smart banners which
-/// is full width of the safe area and auto height. Assumes that the application window is visible.
-/// If requesting any other ad size, returns the un-modified ad size.
-//+ (GADAdSize)safeAdSizeForAdSize:(GADAdSize)adSize;
-
 @end

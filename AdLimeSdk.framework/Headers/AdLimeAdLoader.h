@@ -33,7 +33,8 @@ Class contains API for adLoader
 + (AdLimeMixViewAd *)getMixViewAd:(NSString *)adUnitId rootViewController:(UIViewController *)viewController;
 + (AdLimeMixFullScreenAd *)getMixFullScreenAd:(NSString *)adUnitId;
 
-+ (void)destoryAd:(NSString *)adUnitId;
++ (void)destoryAd:(NSString *)adUnitId DEPRECATED_MSG_ATTRIBUTE("Please use destroyAd:, this method will be removed in feature.");;
++ (void)destroyAd:(NSString *)adUnitId;
 
 /**
 * BannerAdView
